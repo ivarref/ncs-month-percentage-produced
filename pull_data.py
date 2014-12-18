@@ -95,6 +95,7 @@ distinct_decades.append(0)
 
 def fields_of_decade(dec):
   fields = list(set([k for (k, v) in field_to_decade.items() if (v == dec) or (dec==0)]))
+  fields.sort()
   return fields
 
 def decade_production(dec):
@@ -131,7 +132,8 @@ with codecs.open('data/data.tsv', encoding='utf-8', mode='w') as fd:
       if dec == 0:
         dec_str = "All"
       fd.write('%s\t%d\t%.02f\n' % (dec_str, idx, Decimal(100.0) * cumulative / reserves))
-    print ""
+    print " the fields used was: %s" % (", ".join(fields_of_decade(dec))),
+    print "\n"
 
   pass
 
