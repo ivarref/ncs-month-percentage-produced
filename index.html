@@ -101,6 +101,14 @@ d3.tsv('data/data.tsv', function(err, data) {
   .attr("dy", "-.29em")
   .style("text-anchor", "middle")
   .text('Number of years since start of production')
+
+  singleElement(svg, 'text', 'yaxislabel')
+  .attr("transform", "translate(" + (width+35) + "," + (height/2) + ") rotate(90)")
+  .attr("dy", "-.29em")
+  .attr('text-anchor', 'middle')
+  //.style("text-anchor", "middle")
+  //.text('Percentage Produced of Estimated Ultimate Recoverable')
+  .text('Percentage Produced of Estimated Ultimately Recoverable')
 })
 
 </script>
