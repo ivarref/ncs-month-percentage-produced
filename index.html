@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+body { font: 12px sans-serif; }
+svg { border: 1px solid #000; }
+path { fill: none; stroke: black; stroke-width: 3px; }
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1px;
+  shape-rendering: crispEdges;
+}
+</style>
+<title>NCS monthly overview</title>
+<body>
+<script src="d3.v3.min.js"></script>
+<script>
+function singleElement(root, elementtype, id) {
+  var sel = root.selectAll(elementtype + "#" + id).data([1])
+  sel.enter().append(elementtype).attr('id', id)
+  return sel
+}
+
+var margin = {top: 65, right: 60, bottom: 35, left: 60},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+
+var y = d3.scale.linear().range([height, 0])
+var x = d3.scale.linear().range([0, width])
+var color = d3.scale.category10()
+
+d3.tsv('data/data.tsv', function(err, data) {
+  var color_domain = []
+  data.forEach(function(d) {
+    d.month = (+d.month) / 12.0
+    d.percentage_produced = +d.percentage_produced
+    if (color_domain.indexOf(d.decade) == -1) {
+      color_domain.push(d.decade)
+    }
+  })
+  color.domain(color_domain)
+
+  x.domain(d3.extent(data, function(d) { return d.month }))
+  y.domain([0, 100])
+
+  var nested = d3.nest()
+  .key(function(d) { return d.decade })
+  .entries(data)
+
+  svg.selectAll('line').data(d3.range(0, 100, 10))
+  .enter()
+  .append('line')
+  .attr('class', 'axis')
+  .attr('x1', 0).attr('x2', width)
+  .attr('y1', function(d) { return y(d+10) })
+  .attr('y2', function(d) { return y(d+10) })
+  .style('stroke', 'gray')
+  .style('stroke-opacity', '60%')
+
+  svg.selectAll('path').data(nested)
+  .enter()
+  .append('path')
+  .style('stroke', function(d) { return color(d.key) })
+  .datum(function(d) { return d.values })
+  .attr('d', d3.svg.line()
+             .x(function(d) { return x(d.month) })
+             .y(function(d) { return y(d.percentage_produced) })
+       )
+
+  singleElement(svg, 'g', 'xAxis')
+  .attr('class', 'x axis')
+  .attr("transform", "translate(0," + height + ")")
+  .call(d3.svg.axis().scale(x).orient("bottom"))
+
+  singleElement(svg, 'g', 'yAxis')
+  .attr('class', 'y axis')
+  .attr("transform", "translate(" + width + ",0)")
+  .call(d3.svg.axis().scale(y).orient("right"))
+
+  singleElement(svg, 'g', 'yAxis2')
+  .attr('class', 'y axis')
+  .attr("transform", "translate(0,0)")
+  .call(d3.svg.axis().scale(y).orient("left"))
+
+  singleElement(svg, 'text', 'contact')
+  .attr("transform", "translate(" + (width + margin.right) + "," + (height + margin.bottom) + ")")
+  .attr("dy", "-.29em")
+  .attr("dx", "-.29em")
+  .style("text-anchor", "end")
+  .text('Diagram by refsdal.ivar@gmail.com')
+
+  singleElement(svg, 'text', 'xaxislabel')
+  .attr("transform", "translate(" + (width/2) + "," + (height + margin.bottom) + ")")
+  .attr("dy", "-.29em")
+  .style("text-anchor", "middle")
+  .text('Number of years since start of production')
+})
+
+</script>
+</body>
+
