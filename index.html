@@ -4,6 +4,7 @@
 body { font: 12px sans-serif; }
 svg { border: 1px solid #000; }
 path { fill: none; stroke: black; stroke-width: 3px; }
+text.heading { font: 22px sans-serif; font-variant: small-caps; font-weight: bold; }
 .axis path,
 .axis line {
   fill: none;
@@ -94,21 +95,82 @@ d3.tsv('data/data.tsv', function(err, data) {
   .attr("dy", "-.29em")
   .attr("dx", "-.29em")
   .style("text-anchor", "end")
-  .text('Diagram by refsdal.ivar@gmail.com')
+  .style('font-variant', 'small-caps')
+  .text('Diagram by Refsdal.Ivar@gmail.com')
 
   singleElement(svg, 'text', 'xaxislabel')
   .attr("transform", "translate(" + (width/2) + "," + (height + margin.bottom) + ")")
   .attr("dy", "-.29em")
   .style("text-anchor", "middle")
-  .text('Number of years since start of production')
+  .style("font-variant", "small-caps")
+  .text('Number of Years since start of Production')
+
+  singleElement(svg, 'text', 'sourceinfo')
+  .attr("transform", "translate(" + (width) + "," + (height) + ")")
+  .attr("dy", "-.29em")
+  .attr("dx", "-.29em")
+  .style("text-anchor", "end")
+  .text('Based on data from NPD')
 
   singleElement(svg, 'text', 'yaxislabel')
   .attr("transform", "translate(" + (width+35) + "," + (height/2) + ") rotate(90)")
   .attr("dy", "-.29em")
   .attr('text-anchor', 'middle')
-  //.style("text-anchor", "middle")
-  //.text('Percentage Produced of Estimated Ultimate Recoverable')
-  .text('Percentage Produced of Estimated Ultimately Recoverable')
+  .style('font-variant', 'small-caps')
+  .text('Percentage Produced of Recoverable Oil')
+
+  //color_domain.unshift('production decade')
+  color_domain.unshift('Start production decade')
+  var box = { w: 150, h:color_domain.length*16 + 5, margin: 30 }
+
+  var legendbox = singleElement(svg, 'g', 'legendbox')
+  .attr("transform", "translate(" + (width-box.w - box.margin) + "," + (height-box.h-box.margin) + ")")
+
+  legendbox.append('rect')
+  .attr('width', box.w)
+  .attr('height', 5 + 16*color_domain.length)
+  .style('fill', '#eee')
+  .style('fill-opacity', '70%')
+  .style('stroke', 'black')
+  .style('stroke-width', '1px')
+
+  var ctx = legendbox.selectAll('g').data(color_domain)
+  .enter().append('g')
+  .attr('transform', function(d,i) { return "translate(5," + (5+i*16) + ")" })
+
+  ctx
+  .filter(function(d,i) { return i >= 1 })
+  .append('rect')
+  .attr('width', 10)
+  .attr('height', 10)
+  .style('fill', color)
+  .style('stroke', 'black')
+  .style('stroke-width', '1px')
+
+  ctx
+  .append('text')
+  .attr('dx', '1.25em')
+  .attr('dy', '.755em')
+  .text(Object)
+  .filter(function(d,i) { return i <= 0 })
+  .attr('dx', null)
+  .style('font-weight', 'bold')
+
+  ///////////////////////////////
+
+  singleElement(svg, 'text', 'heading')
+  .attr("transform", "translate(" + (0) + "," + (0) + ")")
+  .attr("dy", "-.29em")
+  .attr("class", "heading")
+  .text('How fast are the oil fields on the Norwegian Continental Shelf being extracted?')
+
+  singleElement(svg, 'text', 'moreinfo')
+  .attr("transform", "translate(" + (0) + "," + (0) + ")")
+  .attr("dy", ".95em")
+  .attr("dx", ".25em")
+  .style("font-style", "italic")
+  .text('A steeper line means that a production decade is being produced more aggressively, i.e. the 2000s (red) is produced faster than the 1990s (green).')
+
 })
 
 </script>
