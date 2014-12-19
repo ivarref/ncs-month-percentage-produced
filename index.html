@@ -162,14 +162,42 @@ d3.tsv('data/data.tsv', function(err, data) {
   .attr("transform", "translate(" + (0) + "," + (0) + ")")
   .attr("dy", "-.29em")
   .attr("class", "heading")
-  .text('How fast are the oil fields on the Norwegian Continental Shelf being extracted?')
+  .text('How fast is the Oil on the Norwegian Continental Shelf being extracted?')
 
-  singleElement(svg, 'text', 'moreinfo')
+  var elem = singleElement(svg, 'text', 'moreinfo')
   .attr("transform", "translate(" + (0) + "," + (0) + ")")
-  .attr("dy", ".95em")
-  .attr("dx", ".25em")
+  .attr("dy", ".95em").attr("dx", ".25em").style("font-style", "italic")
+  .text('A steeper line means that a production decade is being produced more aggressively, i.e. the ')
+
+  function ww(elm) { return elm.node().getBBox().width }
+
+  var e2 = singleElement(svg, 'text', 'moreinfo2')
+  .attr("transform", "translate(" + (4 + ww(elem)) + "," + (0) + ")")
+  .attr("dy", ".95em").attr("dx", ".25em")
   .style("font-style", "italic")
-  .text('A steeper line means that a production decade is being produced more aggressively, i.e. the 2000s (red) is produced faster than the 1990s (green).')
+  .style("font-weight", "bold")
+  .style('fill', color('2000s'))
+  .text('2000s')
+
+  var e3 = singleElement(svg, 'text', 'moreinfo3')
+  .attr("transform", "translate(" + (4*2 + ww(e2) + ww(elem)) + "," + (0) + ")")
+  .attr("dy", ".95em").attr("dx", ".25em")
+  .style("font-style", "italic")
+  .text('is produced faster than the')
+
+  var e4 = singleElement(svg, 'text', 'moreinfo4')
+  .attr("transform", "translate(" + (4*3 + ww(e2) + ww(e3) + ww(elem)) + "," + (0) + ")")
+  .attr("dy", ".95em").attr("dx", ".25em")
+  .style("font-style", "italic")
+  .style("font-weight", "bold")
+  .style('fill', color('1990s'))
+  .text('1990s')
+
+  singleElement(svg, 'text', 'moreinfo5')
+  .attr("transform", "translate(" + (4*3 + ww(e2) + ww(e3) + ww(e4) + ww(elem)) + "," + (0) + ")")
+  .attr("dy", ".95em").attr("dx", ".25em")
+  .style("font-style", "italic")
+  .text('.')
 
 })
 
