@@ -23,9 +23,9 @@ function singleElement(root, elementtype, id) {
   return sel
 }
 
-var margin = {top: 65, right: 60, bottom: 35, left: 60},
+var margin = {top: 35, right: 60, bottom: 35, left: 40},
     width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom
+    height = 470 - margin.top - margin.bottom
 
 var svg = d3.select("body").append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -48,7 +48,6 @@ d3.tsv('data/data.tsv', function(err, data) {
     }
     remaining[d.decade] = +d.remaining
   })
-  console.log(remaining)
   color.domain(color_domain)
 
   x.domain(d3.extent(data, function(d) { return d.month }))
@@ -77,6 +76,8 @@ d3.tsv('data/data.tsv', function(err, data) {
              .x(function(d) { return x(d.month) })
              .y(function(d) { return y(d.percentage_produced) })
        )
+  .filter(function(d, i) { return i == nested.length-1 })
+  .style('stroke-width', '5px')
 
   singleElement(svg, 'g', 'xAxis')
   .attr('class', 'x axis')
@@ -149,17 +150,21 @@ d3.tsv('data/data.tsv', function(err, data) {
   .style('stroke', 'black')
   .style('stroke-width', '1px')
 
-  ctx
+  var leftColText = ctx
   .append('text')
+
+  leftColText
   .attr('dx', '1.25em')
   .attr('dy', '.755em')
   .text(Object)
+
+  leftColText
+  .filter(function(d,i) { return i == 0 || i == color_domain.length-1 })
+  .style('font-weight', 'bold')
   .filter(function(d,i) { return i <= 0 })
   .attr('dx', null)
-  .text(Object)
-  .style('font-weight', 'bold')
 
-  ctx
+  var rightColText = ctx
   .append('text')
   .attr('transform', "translate(" + box.w + ",0)")
   .attr('dx', '-0.75em')
@@ -167,9 +172,15 @@ d3.tsv('data/data.tsv', function(err, data) {
   .style('text-anchor', 'end')
   .text("Remaining (Gb)")
   .style('font-weight', 'bold')
+
+  rightColText
   .filter(function(d,i) { return i > 0 })
-  .style('font-weight', null)
   .text(function(d) { return remaining[d] })
+  .style('font-weight', null)
+
+  rightColText
+  .filter(function(d,i) { return i == color_domain.length - 1 })
+  .style('font-weight', 'bold')
 
   ///////////////////////////////
 
