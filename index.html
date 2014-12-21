@@ -39,13 +39,16 @@ var color = d3.scale.category10()
 
 d3.tsv('data/data.tsv', function(err, data) {
   var color_domain = []
+  var remaining = {}
   data.forEach(function(d) {
     d.month = (+d.month) / 12.0
     d.percentage_produced = +d.percentage_produced
     if (color_domain.indexOf(d.decade) == -1) {
       color_domain.push(d.decade)
     }
+    remaining[d.decade] = +d.remaining
   })
+  console.log(remaining)
   color.domain(color_domain)
 
   x.domain(d3.extent(data, function(d) { return d.month }))
@@ -119,9 +122,8 @@ d3.tsv('data/data.tsv', function(err, data) {
   .style('font-variant', 'small-caps')
   .text('Percentage Produced of Recoverable Oil')
 
-  //color_domain.unshift('production decade')
-  color_domain.unshift('Start production decade')
-  var box = { w: 150, h:color_domain.length*16 + 5, margin: 30 }
+  color_domain.unshift('Production decade')
+  var box = { w: 230, h:color_domain.length*16 + 5, margin: 30 }
 
   var legendbox = singleElement(svg, 'g', 'legendbox')
   .attr("transform", "translate(" + (width-box.w - box.margin) + "," + (height-box.h-box.margin) + ")")
@@ -130,7 +132,7 @@ d3.tsv('data/data.tsv', function(err, data) {
   .attr('width', box.w)
   .attr('height', 5 + 16*color_domain.length)
   .style('fill', '#eee')
-  .style('fill-opacity', '70%')
+  .style('fill-opacity', '80%')
   .style('stroke', 'black')
   .style('stroke-width', '1px')
 
@@ -154,7 +156,20 @@ d3.tsv('data/data.tsv', function(err, data) {
   .text(Object)
   .filter(function(d,i) { return i <= 0 })
   .attr('dx', null)
+  .text(Object)
   .style('font-weight', 'bold')
+
+  ctx
+  .append('text')
+  .attr('transform', "translate(" + box.w + ",0)")
+  .attr('dx', '-0.75em')
+  .attr('dy', '.755em')
+  .style('text-anchor', 'end')
+  .text("Remaining (Gb)")
+  .style('font-weight', 'bold')
+  .filter(function(d,i) { return i > 0 })
+  .style('font-weight', null)
+  .text(function(d) { return remaining[d] })
 
   ///////////////////////////////
 
@@ -198,6 +213,11 @@ d3.tsv('data/data.tsv', function(err, data) {
   .attr("dy", ".95em").attr("dx", ".25em")
   .style("font-style", "italic")
   .text('.')
+
+  singleElement(svg, 'text', 'gb_remaining_info')
+  .attr("transform", "translate(" + (0) + "," + (0) + ")")
+  .attr("dy", "1.95em").attr("dx", ".25em").style("font-style", "italic")
+  .text('The remaining recoverable oil is given in the legend box in Giga (Billion) barrels, Gb.')
 
 })
 

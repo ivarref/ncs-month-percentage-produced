@@ -106,7 +106,7 @@ def date_str(data):
   return "%s-%02d" % (data[prfYear], int(data[prfMonth]))
   
 with codecs.open('data/data.tsv', encoding='utf-8', mode='w') as fd:
-  fd.write('decade\tmonth\tpercentage_produced\n')
+  fd.write('decade\tmonth\tpercentage_produced\tremaining\n')
 
   for dec in distinct_decades:
     print dec,
@@ -124,6 +124,7 @@ with codecs.open('data/data.tsv', encoding='utf-8', mode='w') as fd:
         dato_to_lines[key] = []
       dato_to_lines[key].append(line[resource])
 
+    remaining = Decimal(0)
     for (idx, dato) in enumerate(dates):
       sys.stdout.write(".")
       sys.stdout.flush()
@@ -131,8 +132,9 @@ with codecs.open('data/data.tsv', encoding='utf-8', mode='w') as fd:
       dec_str = str(dec) + 's'
       if dec == 0:
         dec_str = "All fields"
-      fd.write('%s\t%d\t%.02f\n' % (dec_str, idx, Decimal(100.0) * cumulative / reserves))
-    print " the fields used was: %s" % (", ".join(fields_of_decade(dec))),
+      remaining = (Decimal(reserves - cumulative) * Decimal(6.29)) / Decimal(1000.0)
+      fd.write('%s\t%d\t%.02f\t%.02f\n' % (dec_str, idx, Decimal(100.0) * cumulative / reserves, remaining))
+    print " the fields used was: %s. \nFinal remaining %.02f" % (", ".join(fields_of_decade(dec)), remaining),
     print "\n"
 
   pass
