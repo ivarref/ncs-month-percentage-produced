@@ -154,15 +154,13 @@ d3.tsv('data/data.tsv', function(err, data) {
   .append('text')
 
   leftColText
-  .attr('dx', '1.25em')
+  .attr('dx', function(d,i) { return i == 0 ? null : '1.25em' })
   .attr('dy', '.755em')
   .text(Object)
 
   leftColText
   .filter(function(d,i) { return i == 0 || i == color_domain.length-1 })
   .style('font-weight', 'bold')
-  .filter(function(d,i) { return i <= 0 })
-  .attr('dx', null)
 
   var rightColText = ctx
   .append('text')
