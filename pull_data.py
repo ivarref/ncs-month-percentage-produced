@@ -9,6 +9,8 @@ production_url_csv = 'http://factpages.npd.no/ReportServer?/FactPages/TableView/
 
 reserves_url_csv = 'http://factpages.npd.no/ReportServer?/FactPages/TableView/field_reserves&rs:Command=Render&rc:Toolbar=false&rc:Parameters=f&rs:Format=CSV&Top100=false&IpAddress=84.208.160.74&CultureCode=en'
 
+production_yearly_url_csv = 'http://factpages.npd.no/ReportServer?/FactPages/TableView/field_production_totalt_NCS_month__DisplayAllRows&rs:Command=Render&rc:Toolbar=false&rc:Parameters=f&rs:Format=CSV&Top100=false&IpAddress=2.150.57.183&CultureCode=en'
+
 def set_output_encoding(encoding='utf-8'):
   import sys
   import codecs
@@ -102,9 +104,10 @@ def write_resource_file(resource, recoverable_resource, resource_file):
     return "%s-%02d" % (data[prfYear], int(data[prfMonth]))
   
   with codecs.open(resource_file, encoding='utf-8', mode='w') as fd:
-    fd.write('decade\tmonth\tpercentage_produced\tremaining\n')
+    fd.write('decade\tmonth\tpercentage_produced\tremaining\tproduced_last_12_months\n')
 
     for dec in distinct_decades:
+      produced_last_12_months = []
       print dec,
       sys.stdout.flush()
       prod = decade_production(dec)
@@ -121,16 +124,23 @@ def write_resource_file(resource, recoverable_resource, resource_file):
         dato_to_lines[key].append(line[resource])
 
       remaining = Decimal(0)
+      last12 = Decimal(0)
       for (idx, dato) in enumerate(dates):
         sys.stdout.write(".")
         sys.stdout.flush()
-        cumulative += sum(dato_to_lines[dato])
+        production_for_date = sum(dato_to_lines[dato])
+        cumulative += production_for_date
+        produced_last_12_months.append(production_for_date)
+        if len(produced_last_12_months) == 13:
+          produced_last_12_months = produced_last_12_months[1:]
         dec_str = str(dec) + 's'
         if dec == 0:
           dec_str = "All fields"
         remaining = (Decimal(reserves - cumulative) * Decimal(6.29)) / Decimal(1000.0)
-        fd.write('%s\t%d\t%.02f\t%.02f\n' % (dec_str, idx, Decimal(100.0) * cumulative / reserves, remaining))
-      print " the fields used was: %s. \nFinal remaining %.02f" % (", ".join(fields_of_decade(dec)), remaining),
+        last12 = (Decimal(sum(produced_last_12_months)) * Decimal(6.29)) / Decimal(1000.0)
+        percentage_produced = Decimal(100.0) * cumulative / reserves
+        fd.write('%s\t%d\t%.02f\t%.02f\t%.02f\n' % (dec_str, idx, percentage_produced, remaining, last12))
+      print " the fields used was: %s. \nFinal remaining %.02f, final last 12 months production %.02f" % (", ".join(fields_of_decade(dec)), remaining, last12),
       print "\n"
 
     pass

@@ -58,13 +58,18 @@ var color = d3.scale.category10()
 function update(svg, data, resource_name) {
   var color_domain = []
   var remaining = {}
+  var produced_last_12_months = 0
+  var remaining_all = 0
+
   data.forEach(function(d) {
     d.month = (+d.month) / 12.0
     d.percentage_produced = +d.percentage_produced
+    produced_last_12_months = +d.produced_last_12_months
     if (color_domain.indexOf(d.decade) == -1) {
       color_domain.push(d.decade)
     }
     remaining[d.decade] = +d.remaining
+    remaining_all = +d.remaining
   })
   color.domain(color_domain)
 
@@ -223,41 +228,51 @@ function update(svg, data, resource_name) {
   .attr("class", "heading")
   .text('on the Norwegian Continental Shelf being extracted?')
 
-  var elem = singleElement(svg, 'text', 'moreinfo')
+  var lines = []
+  var t1 = 'The total production in the preceding 12 months was ' + produced_last_12_months + ' Gb.'
+  var t2 = 'At this rate the remaining reserves will be extracted in ' + (remaining_all/produced_last_12_months).toFixed(1) + ' years.'
+  var info1 = singleElement(svg, 'text', 'info_rp1')
   .attr("transform", "translate(" + (0) + "," + (0) + ")")
   .attr("dy", ".95em").attr("dx", ".25em")
-  .text('A steeper line means that a production decade is being produced more aggressively, i.e. the')
+  .style('font-style', 'italic')
+  .text(t1 + ' ' + t2)
 
+  /*
+  var e1 = singleElement(svg, 'text', 'moreinfo')
+  .attr("transform", "translate(" + (0) + "," + (0) + ")")
+  .attr("dy", lines.length+".95em").attr("dx", ".25em")
+  .text('A steeper line means that a production decade is being produced more aggressively.')
 
   var e2 = singleElement(svg, 'text', 'moreinfo2')
-  .attr("transform", "translate(" + (4 + ww(elem)) + "," + (0) + ")")
-  .attr("dy", ".95em").attr("dx", ".25em")
+  .attr("transform", "translate(" + (4 + ww(e1)) + "," + (0) + ")")
+  .attr("dy", lines.length+".95em").attr("dx", ".25em")
   .style("font-weight", "bold")
   .style('fill', color('2000s'))
   .text('2000s')
 
   var e3 = singleElement(svg, 'text', 'moreinfo3')
-  .attr("transform", "translate(" + (4*2 + ww(e2) + ww(elem)) + "," + (0) + ")")
-  .attr("dy", ".95em").attr("dx", ".25em")
+  .attr("transform", "translate(" + (4*2 + ww(e2) + ww(e1)) + "," + (0) + ")")
+  .attr("dy", lines.length+".95em").attr("dx", ".25em")
   .text('is produced faster than the')
 
   var e4 = singleElement(svg, 'text', 'moreinfo4')
-  .attr("transform", "translate(" + (4*3 + ww(e2) + ww(e3) + ww(elem)) + "," + (0) + ")")
-  .attr("dy", ".95em").attr("dx", ".25em")
+  .attr("transform", "translate(" + (4*3 + ww(e2) + ww(e3) + ww(e1)) + "," + (0) + ")")
+  .attr("dy", lines.length+".95em").attr("dx", ".25em")
   .style("font-weight", "bold")
   .style('fill', color('1990s'))
   .text('1990s')
 
   singleElement(svg, 'text', 'moreinfo5')
-  .attr("transform", "translate(" + (4*3 + ww(e2) + ww(e3) + ww(e4) + ww(elem)) + "," + (0) + ")")
-  .attr("dy", ".95em").attr("dx", ".25em")
+  .attr("transform", "translate(" + (4*3 + ww(e2) + ww(e3) + ww(e4) + ww(e1)) + "," + (0) + ")")
+  .attr("dy", lines.length+".95em").attr("dx", ".25em")
   .style("font-style", "italic")
   .text('.')
   
   e4.style("font-style", "italic")
   e3.style("font-style", "italic")
   e2.style("font-style", "italic")
-  elem.style("font-style", "italic")
+  e1.style("font-style", "italic")
+  */
 
   singleElement(svg, 'text', 'gb_remaining_info')
   .attr("transform", "translate(" + (0) + "," + (0) + ")")
@@ -266,27 +281,34 @@ function update(svg, data, resource_name) {
 }
 
 d3.tsv('data/data_oil.tsv', function(err, data) { update(svg1, data, 'oil') })
-d3.tsv('data/data_gas.tsv', function(err, data) { 
-  update(svg2, data, 'gas') 
-  svg2.selectAll('text').text(function(d) { 
-    return d3.select(this).text()
-    .replace('Oil', 'Gas') 
-    .replace('oil', 'gas') 
-    .replace('barrels', 'barrels oil equivalents') 
-    .replace('Gb', 'Gboe') 
-    })
-})
 
-d3.tsv('data/data_all.tsv', function(err, data) { 
-  update(svg3, data, 'All Petroleum') 
-  svg3.selectAll('text').text(function(d) { 
-    return d3.select(this).text()
-    .replace('Oil', 'All Petroleum') 
-    .replace('remaining recoverable oil', 'remaining recoverable petroleum') 
-    .replace('barrels', 'barrels oil equivalents') 
-    .replace('Gb', 'Gboe') 
-    })
-})
+function show_gas() {
+  d3.tsv('data/data_gas.tsv', function(err, data) { 
+    update(svg2, data, 'gas') 
+    svg2.selectAll('text').text(function(d) { 
+      return d3.select(this).text()
+      .replace('Oil', 'Gas') 
+      .replace('oil', 'gas') 
+      .replace('barrels', 'barrels oil equivalents') 
+      .replace('Gb', 'Gboe') 
+      })
+  })
+}
+
+function show_all() {
+  d3.tsv('data/data_all.tsv', function(err, data) { 
+    update(svg3, data, 'All Petroleum') 
+    svg3.selectAll('text').text(function(d) { 
+      return d3.select(this).text()
+      .replace('Oil', 'All Petroleum') 
+      .replace('remaining recoverable oil', 'remaining recoverable petroleum') 
+      .replace('barrels', 'barrels oil equivalents') 
+      .replace('Gb', 'Gboe') 
+      })
+  })
+}
+
+show_gas(); show_all()
 
 </script>
 </body>
