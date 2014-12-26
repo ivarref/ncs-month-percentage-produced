@@ -24,7 +24,7 @@ function singleElement(root, elementtype, id) {
 }
 
 var margin = {top: 35, right: 60, bottom: 35, left: 40},
-    width = 930 - margin.left - margin.right,
+    width = 960 - margin.left - margin.right,
     height = 470 - margin.top - margin.bottom
 
 var svg1 = d3.select("body").append("svg")
@@ -42,11 +42,20 @@ var svg2 = d3.select("body").append("svg")
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
 
+d3.select('body').append('div')
+
+var svg3 = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .style("margin-top", "1em")
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+
 var y = d3.scale.linear().range([height, 0])
 var x = d3.scale.linear().range([0, width])
 var color = d3.scale.category10()
 
-function update(svg, data) {
+function update(svg, data, resource_name) {
   var color_domain = []
   var remaining = {}
   data.forEach(function(d) {
@@ -191,18 +200,34 @@ function update(svg, data) {
 
   ///////////////////////////////
 
-  singleElement(svg, 'text', 'heading')
+  function ww(elm) { return elm.node().getBBox().width }
+
+  var hd1 = singleElement(svg, 'text', 'heading1')
   .attr("transform", "translate(" + (0) + "," + (0) + ")")
   .attr("dy", "-.29em")
   .attr("class", "heading")
-  .text('How fast is the Oil on the Norwegian Continental Shelf being extracted?')
+  .text('How fast is ' + (resource_name.toLowerCase().indexOf("petroleum")==-1 ? "the" : ""))
+
+  var hd2 = singleElement(svg, 'text', 'heading2')
+  .attr("transform", "translate(" + (ww(hd1)) + "," + (0) + ")")
+  .attr("dy", "-.29em")
+  .attr("dx", ".25em")
+  .attr("class", "heading")
+  .attr("fill", "mediumblue")
+  .text(resource_name.charAt(0).toUpperCase() + resource_name.substring(1))
+
+  var hd3 = singleElement(svg, 'text', 'heading3')
+  .attr("transform", "translate(" + (ww(hd2) + ww(hd1)) + "," + (0) + ")")
+  .attr("dy", "-.29em")
+  .attr("dx", ".50em")
+  .attr("class", "heading")
+  .text('on the Norwegian Continental Shelf being extracted?')
 
   var elem = singleElement(svg, 'text', 'moreinfo')
   .attr("transform", "translate(" + (0) + "," + (0) + ")")
   .attr("dy", ".95em").attr("dx", ".25em")
   .text('A steeper line means that a production decade is being produced more aggressively, i.e. the')
 
-  function ww(elm) { return elm.node().getBBox().width }
 
   var e2 = singleElement(svg, 'text', 'moreinfo2')
   .attr("transform", "translate(" + (4 + ww(elem)) + "," + (0) + ")")
@@ -240,13 +265,24 @@ function update(svg, data) {
   .text('The remaining recoverable oil is given in the legend box in Giga (Billion) barrels, Gb.')
 }
 
-d3.tsv('data/data_oil.tsv', function(err, data) { update(svg1, data) })
+d3.tsv('data/data_oil.tsv', function(err, data) { update(svg1, data, 'oil') })
 d3.tsv('data/data_gas.tsv', function(err, data) { 
-  update(svg2, data) 
+  update(svg2, data, 'gas') 
   svg2.selectAll('text').text(function(d) { 
     return d3.select(this).text()
     .replace('Oil', 'Gas') 
     .replace('oil', 'gas') 
+    .replace('barrels', 'barrels oil equivalents') 
+    .replace('Gb', 'Gboe') 
+    })
+})
+
+d3.tsv('data/data_all.tsv', function(err, data) { 
+  update(svg3, data, 'All Petroleum') 
+  svg3.selectAll('text').text(function(d) { 
+    return d3.select(this).text()
+    .replace('Oil', 'All Petroleum') 
+    .replace('remaining recoverable oil', 'remaining recoverable petroleum') 
     .replace('barrels', 'barrels oil equivalents') 
     .replace('Gb', 'Gboe') 
     })

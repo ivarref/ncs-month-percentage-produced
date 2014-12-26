@@ -142,4 +142,5 @@ def write_resource_file(resource, recoverable_resource, resource_file):
 
 write_resource_file(prfPrdOilNetMillSm3, fldRecoverableOil, 'data/data_oil.tsv')
 write_resource_file(prfPrdGasNetBillSm3, fldRecoverableGas, 'data/data_gas.tsv')
+write_resource_file(prfPrdOeNetMillSm3, fldRecoverableOE, 'data/data_all.tsv')
 
