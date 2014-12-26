@@ -52,90 +52,94 @@ set_output_encoding()
 
 (prfInformationCarrier,prfYear,prfMonth,prfPrdOilNetMillSm3,prfPrdGasNetBillSm3,prfPrdNGLNetMillSm3,prfPrdCondensateNetMillSm3,prfPrdOeNetMillSm3,prfPrdProducedWaterInFieldMillSm3,prfNpdidInformationCarrier) = tuple([idx for (idx, x) in enumerate("prfInformationCarrier,prfYear,prfMonth,prfPrdOilNetMillSm3,prfPrdGasNetBillSm3,prfPrdNGLNetMillSm3,prfPrdCondensateNetMillSm3,prfPrdOeNetMillSm3,prfPrdProducedWaterInFieldMillSm3,prfNpdidInformationCarrier".split(","))])
 
+
+
+def write_resource_file(resource, recoverable_resource, resource_file):
+  def get_reserves_map():
+    reserves = get_url(reserves_url_csv)
+
+    reserves = [line.split(",") for line in reserves.split("\n")[1:] if line.strip() != '']
+    reserves_map = {}
+    for r in reserves:
+      reserves_map[r[fldName]] = Decimal(r[recoverable_resource])
+    #Om jeg husker riktig så pågår det ”prøveproduksjon” fra ”Delta 33/9-6". Funnet ble gjort i 1976 er nå formelt vedtatt utbygd og estimert utvinnbart er rundt 0,074 millioner Sm3 (0,47 millioner fat) olje.
+    reserves_map[u'33/9-6 DELTA'] = Decimal('0.074')
+    return reserves_map
+
+  def have_resource(data):
+    return any([line[resource] > 0 for line in data])
+
+  def decade(data):
+    return int(data[prfYear]) - (int(data[prfYear]) % 10)
+
+  reserves_map = get_reserves_map()
+
+  production_data = [line.split(",") for line in get_url(production_url_csv).split("\n")[1:] if not line.strip() == '']
+
+  field_to_decade = {}
+
+  for line in production_data:
+    line[resource] = Decimal(line[resource])
+    field = line[prfInformationCarrier] 
+    if field not in field_to_decade:
+      field_to_decade[field] = decade(line)
+
+  distinct_decades = list(set([decade(line) for line in production_data]))
+  distinct_decades.sort()
+
+  distinct_decades.append(0)
+
+  def fields_of_decade(dec):
+    fields = list(set([k for (k, v) in field_to_decade.items() if (v == dec) or (dec==0)]))
+    fields.sort()
+    return fields
+
+  def decade_production(dec):
+    fields = fields_of_decade(dec)
+    return [line for line in production_data if line[prfInformationCarrier] in fields]
+  
+  def date_str(data):
+    return "%s-%02d" % (data[prfYear], int(data[prfMonth]))
+  
+  with codecs.open(resource_file, encoding='utf-8', mode='w') as fd:
+    fd.write('decade\tmonth\tpercentage_produced\tremaining\n')
+
+    for dec in distinct_decades:
+      print dec,
+      sys.stdout.flush()
+      prod = decade_production(dec)
+      dates = list(set([date_str(p) for p in prod]))
+      dates.sort()
+      reserves = sum([reserves_map[field] for field in fields_of_decade(dec)])
+      cumulative = Decimal(0)
+      dato_to_lines = {}
+
+      for line in prod:
+        key = date_str(line)
+        if not key in dato_to_lines:
+          dato_to_lines[key] = []
+        dato_to_lines[key].append(line[resource])
+
+      remaining = Decimal(0)
+      for (idx, dato) in enumerate(dates):
+        sys.stdout.write(".")
+        sys.stdout.flush()
+        cumulative += sum(dato_to_lines[dato])
+        dec_str = str(dec) + 's'
+        if dec == 0:
+          dec_str = "All fields"
+        remaining = (Decimal(reserves - cumulative) * Decimal(6.29)) / Decimal(1000.0)
+        fd.write('%s\t%d\t%.02f\t%.02f\n' % (dec_str, idx, Decimal(100.0) * cumulative / reserves, remaining))
+      print " the fields used was: %s. \nFinal remaining %.02f" % (", ".join(fields_of_decade(dec)), remaining),
+      print "\n"
+
+    pass
+
 # *** configuration ***
 #(resource, recoverable_resource) = (prfPrdGasNetBillSm3, fldRecoverableGas)
 (resource, recoverable_resource) = (prfPrdOilNetMillSm3, fldRecoverableOil)
 # *** end of configuration ***
 
-
-def get_reserves_map():
-  reserves = get_url(reserves_url_csv)
-
-  reserves = [line.split(",") for line in reserves.split("\n")[1:] if line.strip() != '']
-  reserves_map = {}
-  for r in reserves:
-    reserves_map[r[fldName]] = Decimal(r[recoverable_resource])
-  #Om jeg husker riktig så pågår det ”prøveproduksjon” fra ”Delta 33/9-6". Funnet ble gjort i 1976 er nå formelt vedtatt utbygd og estimert utvinnbart er rundt 0,074 millioner Sm3 (0,47 millioner fat) olje.
-  reserves_map[u'33/9-6 DELTA'] = Decimal('0.074')
-  return reserves_map
-
-reserves_map = get_reserves_map()
-
-production_data = [line.split(",") for line in get_url(production_url_csv).split("\n")[1:] if not line.strip() == '']
-
-field_to_decade = {}
-
-
-def have_resource(data):
-  return any([line[resource] > 0 for line in data])
-
-def decade(data):
-  return int(data[prfYear]) - (int(data[prfYear]) % 10)
-
-for line in production_data:
-  line[resource] = Decimal(line[resource])
-  field = line[prfInformationCarrier] 
-  if field not in field_to_decade:
-    field_to_decade[field] = decade(line)
-
-distinct_decades = list(set([decade(line) for line in production_data]))
-distinct_decades.sort()
-
-distinct_decades.append(0)
-
-def fields_of_decade(dec):
-  fields = list(set([k for (k, v) in field_to_decade.items() if (v == dec) or (dec==0)]))
-  fields.sort()
-  return fields
-
-def decade_production(dec):
-  fields = fields_of_decade(dec)
-  return [line for line in production_data if line[prfInformationCarrier] in fields]
-  
-def date_str(data):
-  return "%s-%02d" % (data[prfYear], int(data[prfMonth]))
-  
-with codecs.open('data/data.tsv', encoding='utf-8', mode='w') as fd:
-  fd.write('decade\tmonth\tpercentage_produced\tremaining\n')
-
-  for dec in distinct_decades:
-    print dec,
-    sys.stdout.flush()
-    prod = decade_production(dec)
-    dates = list(set([date_str(p) for p in prod]))
-    dates.sort()
-    reserves = sum([reserves_map[field] for field in fields_of_decade(dec)])
-    cumulative = Decimal(0)
-    dato_to_lines = {}
-
-    for line in prod:
-      key = date_str(line)
-      if not key in dato_to_lines:
-        dato_to_lines[key] = []
-      dato_to_lines[key].append(line[resource])
-
-    remaining = Decimal(0)
-    for (idx, dato) in enumerate(dates):
-      sys.stdout.write(".")
-      sys.stdout.flush()
-      cumulative += sum(dato_to_lines[dato])
-      dec_str = str(dec) + 's'
-      if dec == 0:
-        dec_str = "All fields"
-      remaining = (Decimal(reserves - cumulative) * Decimal(6.29)) / Decimal(1000.0)
-      fd.write('%s\t%d\t%.02f\t%.02f\n' % (dec_str, idx, Decimal(100.0) * cumulative / reserves, remaining))
-    print " the fields used was: %s. \nFinal remaining %.02f" % (", ".join(fields_of_decade(dec)), remaining),
-    print "\n"
-
-  pass
+write_resource_file(prfPrdOilNetMillSm3, fldRecoverableOil, 'data/data_oil.tsv')
+write_resource_file(prfPrdGasNetBillSm3, fldRecoverableGas, 'data/data_gas.tsv')
 

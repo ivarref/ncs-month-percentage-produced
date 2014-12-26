@@ -27,9 +27,18 @@ var margin = {top: 35, right: 60, bottom: 35, left: 40},
     width = 930 - margin.left - margin.right,
     height = 470 - margin.top - margin.bottom
 
-var svg = d3.select("body").append("svg")
+var svg1 = d3.select("body").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+
+d3.select('body').append('div')
+
+var svg2 = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .style("margin-top", "1em")
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
 
@@ -37,7 +46,7 @@ var y = d3.scale.linear().range([height, 0])
 var x = d3.scale.linear().range([0, width])
 var color = d3.scale.category10()
 
-d3.tsv('data/data.tsv', function(err, data) {
+function update(svg, data) {
   var color_domain = []
   var remaining = {}
   data.forEach(function(d) {
@@ -229,7 +238,18 @@ d3.tsv('data/data.tsv', function(err, data) {
   .attr("transform", "translate(" + (0) + "," + (0) + ")")
   .attr("dy", "1.95em").attr("dx", ".25em").style("font-style", "italic")
   .text('The remaining recoverable oil is given in the legend box in Giga (Billion) barrels, Gb.')
+}
 
+d3.tsv('data/data_oil.tsv', function(err, data) { update(svg1, data) })
+d3.tsv('data/data_gas.tsv', function(err, data) { 
+  update(svg2, data) 
+  svg2.selectAll('text').text(function(d) { 
+    return d3.select(this).text()
+    .replace('Oil', 'Gas') 
+    .replace('oil', 'gas') 
+    .replace('barrels', 'barrels oil equivalents') 
+    .replace('Gb', 'Gboe') 
+    })
 })
 
 </script>
