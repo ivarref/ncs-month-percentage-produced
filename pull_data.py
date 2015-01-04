@@ -26,6 +26,17 @@ def set_output_encoding(encoding='utf-8'):
   if current is None :
     sys.stderr = codecs.getwriter(encoding)(sys.stderr)
 
+def break_on_duplicates():
+  entries = []
+  def stop_on_duplicates(elem):
+    if elem in entries:
+      import sys
+      print "ERROR. Got duplicate " + str(elem)
+      sys.exit(-1)
+    entries.append(elem)
+
+  return stop_on_duplicates
+
 def get_url(url):
   import urllib2
   import hashlib
@@ -54,15 +65,15 @@ set_output_encoding()
 
 (prfInformationCarrier,prfYear,prfMonth,prfPrdOilNetMillSm3,prfPrdGasNetBillSm3,prfPrdNGLNetMillSm3,prfPrdCondensateNetMillSm3,prfPrdOeNetMillSm3,prfPrdProducedWaterInFieldMillSm3,prfNpdidInformationCarrier) = tuple([idx for (idx, x) in enumerate("prfInformationCarrier,prfYear,prfMonth,prfPrdOilNetMillSm3,prfPrdGasNetBillSm3,prfPrdNGLNetMillSm3,prfPrdCondensateNetMillSm3,prfPrdOeNetMillSm3,prfPrdProducedWaterInFieldMillSm3,prfNpdidInformationCarrier".split(","))])
 
-
-
 def write_resource_file(resource, recoverable_resource, resource_file):
   def get_reserves_map():
     reserves = get_url(reserves_url_csv)
 
+    check = break_on_duplicates()
     reserves = [line.split(",") for line in reserves.split("\n")[1:] if line.strip() != '']
     reserves_map = {}
     for r in reserves:
+      check(r[fldName])
       reserves_map[r[fldName]] = Decimal(r[recoverable_resource])
     #Om jeg husker riktig så pågår det ”prøveproduksjon” fra ”Delta 33/9-6". Funnet ble gjort i 1976 er nå formelt vedtatt utbygd og estimert utvinnbart er rundt 0,074 millioner Sm3 (0,47 millioner fat) olje.
     reserves_map[u'33/9-6 DELTA'] = Decimal('0.074')
@@ -141,14 +152,10 @@ def write_resource_file(resource, recoverable_resource, resource_file):
         percentage_produced = Decimal(100.0) * cumulative / reserves
         fd.write('%s\t%d\t%.02f\t%.02f\t%.02f\n' % (dec_str, idx, percentage_produced, remaining, last12))
       print " the fields used was: %s. \nFinal remaining %.02f, final last 12 months production %.02f" % (", ".join(fields_of_decade(dec)), remaining, last12),
+      print "Reserves: %.02f Gb. Total production: %.02f Gb" % (reserves*Decimal(6.29) / Decimal(1000.0), cumulative * Decimal(6.29) / Decimal(1000.))
       print "\n"
 
     pass
-
-# *** configuration ***
-#(resource, recoverable_resource) = (prfPrdGasNetBillSm3, fldRecoverableGas)
-(resource, recoverable_resource) = (prfPrdOilNetMillSm3, fldRecoverableOil)
-# *** end of configuration ***
 
 write_resource_file(prfPrdOilNetMillSm3, fldRecoverableOil, 'data/data_oil.tsv')
 write_resource_file(prfPrdGasNetBillSm3, fldRecoverableGas, 'data/data_gas.tsv')
