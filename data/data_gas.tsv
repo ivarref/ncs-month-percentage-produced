@@ -535,6 +535,7 @@ decade	month	percentage_produced	remaining	produced_last_12_months
 1970s	533	94.20	0.17	0.02
 1970s	534	94.28	0.17	0.02
 1970s	535	94.36	0.16	0.02
+1970s	536	94.43	0.16	0.02
 1980s	0	0.00	1.79	0.00
 1980s	1	0.00	1.79	0.00
 1980s	2	0.00	1.79	0.00
@@ -959,6 +960,7 @@ decade	month	percentage_produced	remaining	produced_last_12_months
 1980s	421	69.56	0.54	0.02
 1980s	422	69.67	0.54	0.02
 1980s	423	69.74	0.54	0.02
+1980s	424	69.81	0.54	0.02
 1990s	0	0.00	13.39	0.00
 1990s	1	0.00	13.39	0.00
 1990s	2	0.00	13.39	0.00
@@ -1272,6 +1274,7 @@ decade	month	percentage_produced	remaining	produced_last_12_months
 1990s	310	47.18	7.07	0.35
 1990s	311	47.44	7.04	0.35
 1990s	312	47.70	7.00	0.36
+1990s	313	47.95	6.97	0.36
 2000s	0	0.00	5.25	0.00
 2000s	1	0.00	5.25	0.00
 2000s	2	0.00	5.25	0.00
@@ -1464,6 +1467,7 @@ decade	month	percentage_produced	remaining	produced_last_12_months
 2000s	189	45.67	2.85	0.24
 2000s	190	46.08	2.83	0.24
 2000s	191	46.48	2.81	0.24
+2000s	192	46.86	2.79	0.24
 2010s	0	0.00	0.97	0.00
 2010s	1	0.00	0.97	0.00
 2010s	2	0.00	0.97	0.00
@@ -1530,6 +1534,7 @@ decade	month	percentage_produced	remaining	produced_last_12_months
 2010s	63	30.62	0.68	0.10
 2010s	64	31.70	0.67	0.10
 2010s	65	32.76	0.66	0.11
+2010s	66	33.75	0.65	0.11
 All fields	0	0.00	24.31	0.00
 All fields	1	0.00	24.31	0.00
 All fields	2	0.00	24.31	0.00
@@ -2066,3 +2071,4 @@ All fields	532	53.17	11.38	0.73
 All fields	533	53.44	11.32	0.74
 All fields	534	53.73	11.25	0.74
 All fields	535	54.02	11.18	0.74
+All fields	536	54.29	11.11	0.75
