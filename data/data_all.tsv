@@ -536,6 +536,7 @@ decade	month	percentage_produced	remaining	produced_last_12_months
 1970s	534	91.90	0.94	0.10
 1970s	535	91.98	0.93	0.10
 1970s	536	92.06	0.93	0.11
+1970s	537	92.14	0.92	0.11
 1980s	0	0.00	8.94	0.00
 1980s	1	0.00	8.94	0.00
 1980s	2	0.00	8.94	0.00
@@ -961,6 +962,7 @@ decade	month	percentage_produced	remaining	produced_last_12_months
 1980s	422	86.82	1.18	0.08
 1980s	423	86.90	1.17	0.08
 1980s	424	86.97	1.16	0.08
+1980s	425	87.04	1.16	0.08
 1990s	0	0.00	27.09	0.00
 1990s	1	0.00	27.09	0.00
 1990s	2	0.01	27.08	0.00
@@ -1275,6 +1277,7 @@ decade	month	percentage_produced	remaining	produced_last_12_months
 1990s	311	65.61	9.32	0.64
 1990s	312	65.83	9.26	0.65
 1990s	313	66.04	9.20	0.65
+1990s	314	66.26	9.14	0.65
 2000s	0	0.00	8.44	0.00
 2000s	1	0.01	8.44	0.00
 2000s	2	0.01	8.44	0.00
@@ -1468,607 +1471,610 @@ decade	month	percentage_produced	remaining	produced_last_12_months
 2000s	190	54.52	3.84	0.37
 2000s	191	54.90	3.81	0.37
 2000s	192	55.26	3.78	0.37
-2010s	0	0.01	2.11	0.00
-2010s	1	0.03	2.11	0.00
-2010s	2	0.07	2.11	0.00
-2010s	3	0.17	2.11	0.00
-2010s	4	0.27	2.11	0.01
-2010s	5	0.42	2.10	0.01
-2010s	6	0.61	2.10	0.01
-2010s	7	0.81	2.09	0.02
-2010s	8	1.05	2.09	0.02
-2010s	9	1.31	2.08	0.03
-2010s	10	1.59	2.08	0.03
-2010s	11	1.87	2.07	0.04
-2010s	12	2.16	2.07	0.05
-2010s	13	2.41	2.06	0.05
-2010s	14	2.64	2.06	0.05
-2010s	15	2.75	2.05	0.05
-2010s	16	2.95	2.05	0.06
-2010s	17	3.35	2.04	0.06
-2010s	18	3.71	2.03	0.07
-2010s	19	4.10	2.03	0.07
-2010s	20	4.52	2.02	0.07
-2010s	21	4.94	2.01	0.08
-2010s	22	5.32	2.00	0.08
-2010s	23	5.75	1.99	0.08
-2010s	24	6.04	1.98	0.08
-2010s	25	6.28	1.98	0.08
-2010s	26	6.60	1.97	0.08
-2010s	27	6.85	1.97	0.09
-2010s	28	7.28	1.96	0.09
-2010s	29	7.78	1.95	0.09
-2010s	30	8.25	1.94	0.10
-2010s	31	8.76	1.93	0.10
-2010s	32	9.37	1.91	0.10
-2010s	33	10.00	1.90	0.11
-2010s	34	10.60	1.89	0.11
-2010s	35	11.27	1.87	0.12
-2010s	36	11.93	1.86	0.12
-2010s	37	12.41	1.85	0.13
-2010s	38	13.10	1.84	0.14
-2010s	39	13.77	1.82	0.15
-2010s	40	14.37	1.81	0.15
-2010s	41	15.07	1.79	0.15
-2010s	42	15.75	1.78	0.16
-2010s	43	16.48	1.76	0.16
-2010s	44	17.21	1.75	0.17
-2010s	45	17.96	1.73	0.17
-2010s	46	18.75	1.72	0.17
-2010s	47	19.55	1.70	0.17
-2010s	48	20.19	1.69	0.17
-2010s	49	20.89	1.67	0.18
-2010s	50	21.70	1.65	0.18
-2010s	51	22.41	1.64	0.18
-2010s	52	23.31	1.62	0.19
-2010s	53	24.17	1.60	0.19
-2010s	54	25.00	1.58	0.20
-2010s	55	25.84	1.57	0.20
-2010s	56	26.78	1.55	0.20
-2010s	57	27.72	1.53	0.21
-2010s	58	28.71	1.51	0.21
-2010s	59	29.73	1.48	0.21
-2010s	60	30.73	1.46	0.22
-2010s	61	31.69	1.44	0.23
-2010s	62	32.72	1.42	0.23
-2010s	63	33.80	1.40	0.24
-2010s	64	34.97	1.37	0.25
-2010s	65	36.14	1.35	0.25
-2010s	66	37.21	1.33	0.26
-All fields	0	0.00	58.23	0.00
-All fields	1	0.00	58.23	0.00
-All fields	2	0.00	58.23	0.00
-All fields	3	0.00	58.23	0.00
-All fields	4	0.00	58.23	0.00
-All fields	5	0.00	58.23	0.00
-All fields	6	0.00	58.23	0.00
-All fields	7	0.00	58.23	0.00
-All fields	8	0.01	58.23	0.00
-All fields	9	0.01	58.23	0.00
-All fields	10	0.01	58.23	0.01
-All fields	11	0.01	58.22	0.01
-All fields	12	0.01	58.22	0.01
-All fields	13	0.02	58.22	0.01
-All fields	14	0.02	58.22	0.01
-All fields	15	0.02	58.22	0.01
-All fields	16	0.02	58.22	0.01
-All fields	17	0.02	58.22	0.01
-All fields	18	0.02	58.22	0.01
-All fields	19	0.03	58.22	0.01
-All fields	20	0.03	58.22	0.01
-All fields	21	0.03	58.21	0.01
-All fields	22	0.03	58.21	0.01
-All fields	23	0.03	58.21	0.01
-All fields	24	0.04	58.21	0.01
-All fields	25	0.04	58.21	0.01
-All fields	26	0.04	58.21	0.01
-All fields	27	0.04	58.21	0.01
-All fields	28	0.04	58.21	0.01
-All fields	29	0.04	58.21	0.01
-All fields	30	0.04	58.21	0.01
-All fields	31	0.04	58.21	0.01
-All fields	32	0.05	58.20	0.01
-All fields	33	0.05	58.20	0.01
-All fields	34	0.05	58.20	0.01
-All fields	35	0.05	58.20	0.01
-All fields	36	0.05	58.20	0.01
-All fields	37	0.05	58.20	0.01
-All fields	38	0.06	58.20	0.01
-All fields	39	0.06	58.20	0.01
-All fields	40	0.06	58.20	0.01
-All fields	41	0.06	58.19	0.01
-All fields	42	0.07	58.19	0.01
-All fields	43	0.07	58.19	0.01
-All fields	44	0.07	58.19	0.01
-All fields	45	0.08	58.19	0.02
-All fields	46	0.09	58.18	0.02
-All fields	47	0.09	58.18	0.03
-All fields	48	0.11	58.17	0.03
-All fields	49	0.12	58.16	0.04
-All fields	50	0.13	58.15	0.04
-All fields	51	0.15	58.15	0.05
-All fields	52	0.16	58.14	0.06
-All fields	53	0.17	58.13	0.06
-All fields	54	0.19	58.12	0.07
-All fields	55	0.20	58.12	0.08
-All fields	56	0.21	58.11	0.08
-All fields	57	0.23	58.10	0.09
-All fields	58	0.24	58.09	0.09
-All fields	59	0.25	58.09	0.09
-All fields	60	0.26	58.08	0.09
-All fields	61	0.28	58.07	0.09
-All fields	62	0.30	58.06	0.10
-All fields	63	0.31	58.05	0.10
-All fields	64	0.33	58.04	0.10
-All fields	65	0.34	58.03	0.10
-All fields	66	0.36	58.02	0.10
-All fields	67	0.38	58.01	0.10
-All fields	68	0.40	58.00	0.11
-All fields	69	0.41	57.99	0.11
-All fields	70	0.42	57.98	0.11
-All fields	71	0.43	57.98	0.11
-All fields	72	0.44	57.97	0.11
-All fields	73	0.46	57.97	0.10
-All fields	74	0.47	57.96	0.10
-All fields	75	0.49	57.95	0.10
-All fields	76	0.51	57.93	0.11
-All fields	77	0.54	57.92	0.11
-All fields	78	0.57	57.90	0.12
-All fields	79	0.60	57.88	0.13
-All fields	80	0.63	57.86	0.14
-All fields	81	0.66	57.85	0.15
-All fields	82	0.69	57.83	0.16
-All fields	83	0.72	57.81	0.17
-All fields	84	0.74	57.80	0.17
-All fields	85	0.77	57.78	0.18
-All fields	86	0.80	57.76	0.19
-All fields	87	0.84	57.74	0.20
-All fields	88	0.87	57.72	0.21
-All fields	89	0.91	57.70	0.22
-All fields	90	0.95	57.68	0.22
-All fields	91	0.98	57.66	0.22
-All fields	92	1.02	57.64	0.23
-All fields	93	1.06	57.62	0.23
-All fields	94	1.10	57.59	0.23
-All fields	95	1.13	57.57	0.24
-All fields	96	1.16	57.55	0.24
-All fields	97	1.20	57.53	0.25
-All fields	98	1.24	57.51	0.25
-All fields	99	1.28	57.48	0.26
-All fields	100	1.32	57.46	0.26
-All fields	101	1.37	57.43	0.27
-All fields	102	1.42	57.40	0.28
-All fields	103	1.48	57.37	0.29
-All fields	104	1.54	57.34	0.30
-All fields	105	1.59	57.30	0.31
-All fields	106	1.64	57.27	0.32
-All fields	107	1.70	57.24	0.33
-All fields	108	1.75	57.21	0.34
-All fields	109	1.78	57.20	0.34
-All fields	110	1.82	57.17	0.34
-All fields	111	1.87	57.14	0.34
-All fields	112	1.92	57.11	0.35
-All fields	113	1.97	57.08	0.35
-All fields	114	2.03	57.05	0.35
-All fields	115	2.08	57.02	0.35
-All fields	116	2.13	56.99	0.35
-All fields	117	2.19	56.96	0.34
-All fields	118	2.24	56.93	0.34
-All fields	119	2.29	56.90	0.34
-All fields	120	2.34	56.87	0.34
-All fields	121	2.39	56.84	0.36
-All fields	122	2.42	56.82	0.35
-All fields	123	2.47	56.80	0.35
-All fields	124	2.51	56.77	0.34
-All fields	125	2.56	56.74	0.34
-All fields	126	2.62	56.71	0.34
-All fields	127	2.68	56.67	0.35
-All fields	128	2.73	56.64	0.35
-All fields	129	2.78	56.61	0.35
-All fields	130	2.84	56.58	0.35
-All fields	131	2.89	56.55	0.35
-All fields	132	2.93	56.53	0.34
-All fields	133	2.97	56.50	0.34
-All fields	134	3.01	56.48	0.35
-All fields	135	3.05	56.45	0.34
-All fields	136	3.10	56.43	0.34
-All fields	137	3.15	56.40	0.34
-All fields	138	3.21	56.36	0.34
-All fields	139	3.26	56.33	0.34
-All fields	140	3.32	56.30	0.35
-All fields	141	3.38	56.26	0.35
-All fields	142	3.44	56.23	0.35
-All fields	143	3.49	56.20	0.35
-All fields	144	3.54	56.17	0.36
-All fields	145	3.60	56.14	0.36
-All fields	146	3.64	56.11	0.37
-All fields	147	3.69	56.08	0.37
-All fields	148	3.75	56.05	0.38
-All fields	149	3.81	56.01	0.39
-All fields	150	3.88	55.97	0.39
-All fields	151	3.95	55.93	0.40
-All fields	152	4.01	55.90	0.40
-All fields	153	4.07	55.86	0.40
-All fields	154	4.14	55.82	0.41
-All fields	155	4.20	55.79	0.41
-All fields	156	4.26	55.75	0.42
-All fields	157	4.31	55.72	0.42
-All fields	158	4.37	55.69	0.42
-All fields	159	4.42	55.65	0.43
-All fields	160	4.49	55.62	0.43
-All fields	161	4.56	55.58	0.43
-All fields	162	4.63	55.53	0.44
-All fields	163	4.70	55.49	0.44
-All fields	164	4.77	55.46	0.44
-All fields	165	4.84	55.41	0.44
-All fields	166	4.91	55.37	0.45
-All fields	167	4.97	55.34	0.45
-All fields	168	5.03	55.30	0.45
-All fields	169	5.09	55.27	0.45
-All fields	170	5.15	55.23	0.46
-All fields	171	5.21	55.20	0.46
-All fields	172	5.28	55.16	0.46
-All fields	173	5.35	55.11	0.46
-All fields	174	5.43	55.07	0.47
-All fields	175	5.51	55.02	0.47
-All fields	176	5.58	54.98	0.47
-All fields	177	5.66	54.94	0.48
-All fields	178	5.68	54.92	0.45
-All fields	179	5.75	54.88	0.45
-All fields	180	5.82	54.84	0.46
-All fields	181	5.90	54.80	0.47
-All fields	182	5.97	54.76	0.48
-All fields	183	6.04	54.72	0.48
-All fields	184	6.12	54.67	0.49
-All fields	185	6.20	54.62	0.49
-All fields	186	6.28	54.57	0.50
-All fields	187	6.37	54.52	0.50
-All fields	188	6.45	54.48	0.51
-All fields	189	6.53	54.43	0.51
-All fields	190	6.62	54.38	0.54
-All fields	191	6.70	54.33	0.55
-All fields	192	6.77	54.29	0.55
-All fields	193	6.85	54.24	0.56
-All fields	194	6.90	54.21	0.54
-All fields	195	6.98	54.16	0.55
-All fields	196	7.07	54.11	0.56
-All fields	197	7.16	54.06	0.56
-All fields	198	7.25	54.01	0.56
-All fields	199	7.34	53.96	0.56
-All fields	200	7.43	53.91	0.57
-All fields	201	7.52	53.85	0.57
-All fields	202	7.61	53.80	0.58
-All fields	203	7.70	53.75	0.58
-All fields	204	7.77	53.71	0.58
-All fields	205	7.86	53.66	0.59
-All fields	206	7.94	53.61	0.60
-All fields	207	8.02	53.56	0.60
-All fields	208	8.11	53.51	0.61
-All fields	209	8.21	53.45	0.61
-All fields	210	8.31	53.40	0.62
-All fields	211	8.41	53.33	0.63
-All fields	212	8.51	53.28	0.63
-All fields	213	8.62	53.21	0.64
-All fields	214	8.73	53.15	0.65
-All fields	215	8.84	53.08	0.67
-All fields	216	8.94	53.03	0.68
-All fields	217	9.05	52.96	0.70
-All fields	218	9.16	52.90	0.71
-All fields	219	9.26	52.84	0.72
-All fields	220	9.37	52.77	0.73
-All fields	221	9.49	52.71	0.75
-All fields	222	9.60	52.64	0.75
-All fields	223	9.71	52.57	0.76
-All fields	224	9.82	52.51	0.76
-All fields	225	9.94	52.44	0.77
-All fields	226	10.05	52.38	0.76
-All fields	227	10.16	52.32	0.77
-All fields	228	10.26	52.26	0.77
-All fields	229	10.36	52.20	0.76
-All fields	230	10.46	52.14	0.76
-All fields	231	10.57	52.08	0.76
-All fields	232	10.70	52.00	0.77
-All fields	233	10.82	51.93	0.78
-All fields	234	10.95	51.86	0.79
-All fields	235	11.08	51.78	0.79
-All fields	236	11.20	51.71	0.80
-All fields	237	11.33	51.64	0.81
-All fields	238	11.45	51.56	0.82
-All fields	239	11.58	51.49	0.83
-All fields	240	11.70	51.42	0.84
-All fields	241	11.82	51.35	0.85
-All fields	242	11.91	51.30	0.84
-All fields	243	12.04	51.22	0.86
-All fields	244	12.17	51.14	0.86
-All fields	245	12.30	51.07	0.86
-All fields	246	12.44	50.98	0.87
-All fields	247	12.59	50.90	0.88
-All fields	248	12.72	50.82	0.89
-All fields	249	12.87	50.74	0.90
-All fields	250	13.01	50.66	0.91
-All fields	251	13.14	50.58	0.90
-All fields	252	13.27	50.50	0.91
-All fields	253	13.41	50.42	0.93
-All fields	254	13.55	50.34	0.95
-All fields	255	13.68	50.27	0.95
-All fields	256	13.82	50.18	0.96
-All fields	257	13.97	50.10	0.97
-All fields	258	14.12	50.01	0.97
-All fields	259	14.25	49.93	0.97
-All fields	260	14.38	49.86	0.97
-All fields	261	14.54	49.77	0.97
-All fields	262	14.68	49.68	0.98
-All fields	263	14.83	49.59	0.99
-All fields	264	14.95	49.52	0.98
-All fields	265	15.10	49.44	0.99
-All fields	266	15.25	49.35	0.99
-All fields	267	15.38	49.27	0.99
-All fields	268	15.55	49.18	1.00
-All fields	269	15.71	49.08	1.02
-All fields	270	15.87	48.99	1.02
-All fields	271	16.04	48.89	1.04
-All fields	272	16.19	48.80	1.05
-All fields	273	16.36	48.71	1.06
-All fields	274	16.52	48.61	1.07
-All fields	275	16.68	48.52	1.08
-All fields	276	16.85	48.42	1.10
-All fields	277	17.01	48.32	1.11
-All fields	278	17.14	48.25	1.10
-All fields	279	17.30	48.16	1.12
-All fields	280	17.48	48.05	1.13
-All fields	281	17.66	47.95	1.14
-All fields	282	17.85	47.84	1.15
-All fields	283	18.03	47.73	1.16
-All fields	284	18.18	47.64	1.16
-All fields	285	18.36	47.54	1.17
-All fields	286	18.53	47.44	1.18
-All fields	287	18.71	47.34	1.18
-All fields	288	18.87	47.24	1.18
-All fields	289	19.05	47.14	1.18
-All fields	290	19.21	47.05	1.20
-All fields	291	19.38	46.95	1.21
-All fields	292	19.57	46.84	1.22
-All fields	293	19.76	46.73	1.22
-All fields	294	19.96	46.61	1.23
-All fields	295	20.16	46.49	1.24
-All fields	296	20.36	46.38	1.27
-All fields	297	20.55	46.26	1.28
-All fields	298	20.75	46.15	1.29
-All fields	299	20.95	46.03	1.30
-All fields	300	21.14	45.92	1.32
-All fields	301	21.35	45.80	1.34
-All fields	302	21.55	45.68	1.36
-All fields	303	21.75	45.56	1.38
-All fields	304	21.96	45.44	1.39
-All fields	305	22.17	45.32	1.40
-All fields	306	22.39	45.19	1.41
-All fields	307	22.61	45.06	1.43
-All fields	308	22.81	44.95	1.43
-All fields	309	23.02	44.83	1.44
-All fields	310	23.23	44.70	1.44
-All fields	311	23.44	44.58	1.45
-All fields	312	23.64	44.47	1.45
-All fields	313	23.85	44.34	1.46
-All fields	314	24.04	44.23	1.45
-All fields	315	24.23	44.12	1.44
-All fields	316	24.45	43.99	1.45
-All fields	317	24.67	43.86	1.46
-All fields	318	24.90	43.73	1.46
-All fields	319	25.13	43.60	1.47
-All fields	320	25.33	43.48	1.47
-All fields	321	25.55	43.36	1.47
-All fields	322	25.76	43.23	1.47
-All fields	323	25.96	43.12	1.46
-All fields	324	26.15	43.00	1.46
-All fields	325	26.36	42.88	1.46
-All fields	326	26.52	42.79	1.44
-All fields	327	26.71	42.68	1.44
-All fields	328	26.91	42.56	1.43
-All fields	329	27.12	42.44	1.42
-All fields	330	27.33	42.31	1.42
-All fields	331	27.55	42.19	1.41
-All fields	332	27.74	42.08	1.40
-All fields	333	27.95	41.95	1.40
-All fields	334	28.15	41.84	1.39
-All fields	335	28.36	41.72	1.40
-All fields	336	28.54	41.61	1.39
-All fields	337	28.75	41.49	1.39
-All fields	338	28.94	41.38	1.41
-All fields	339	29.13	41.27	1.41
-All fields	340	29.34	41.14	1.42
-All fields	341	29.57	41.01	1.43
-All fields	342	29.82	40.87	1.44
-All fields	343	30.05	40.73	1.45
-All fields	344	30.27	40.60	1.47
-All fields	345	30.50	40.47	1.49
-All fields	346	30.71	40.35	1.49
-All fields	347	30.92	40.22	1.49
-All fields	348	31.12	40.11	1.50
-All fields	349	31.34	39.98	1.51
-All fields	350	31.54	39.87	1.51
-All fields	351	31.73	39.75	1.52
-All fields	352	31.96	39.62	1.52
-All fields	353	32.20	39.48	1.53
-All fields	354	32.45	39.34	1.53
-All fields	355	32.69	39.19	1.54
-All fields	356	32.89	39.08	1.53
-All fields	357	33.12	38.94	1.52
-All fields	358	33.34	38.82	1.53
-All fields	359	33.55	38.69	1.53
-All fields	360	33.76	38.57	1.54
-All fields	361	34.00	38.43	1.55
-All fields	362	34.22	38.31	1.56
-All fields	363	34.43	38.18	1.57
-All fields	364	34.67	38.04	1.58
-All fields	365	34.91	37.90	1.58
-All fields	366	35.16	37.76	1.58
-All fields	367	35.41	37.61	1.58
-All fields	368	35.64	37.48	1.60
-All fields	369	35.85	37.35	1.59
-All fields	370	36.10	37.21	1.60
-All fields	371	36.34	37.07	1.62
-All fields	372	36.56	36.94	1.63
-All fields	373	36.80	36.80	1.63
-All fields	374	37.01	36.68	1.63
-All fields	375	37.21	36.56	1.62
-All fields	376	37.45	36.42	1.62
-All fields	377	37.70	36.28	1.63
-All fields	378	37.95	36.13	1.63
-All fields	379	38.21	35.98	1.63
-All fields	380	38.44	35.85	1.63
-All fields	381	38.70	35.70	1.66
-All fields	382	38.93	35.56	1.65
-All fields	383	39.16	35.43	1.64
-All fields	384	39.36	35.31	1.63
-All fields	385	39.59	35.18	1.63
-All fields	386	39.81	35.05	1.62
-All fields	387	40.02	34.93	1.64
-All fields	388	40.26	34.78	1.64
-All fields	389	40.52	34.64	1.64
-All fields	390	40.78	34.48	1.65
-All fields	391	41.04	34.33	1.65
-All fields	392	41.29	34.19	1.66
-All fields	393	41.55	34.04	1.66
-All fields	394	41.79	33.90	1.66
-All fields	395	42.03	33.76	1.67
-All fields	396	42.26	33.62	1.69
-All fields	397	42.49	33.49	1.69
-All fields	398	42.69	33.37	1.68
-All fields	399	42.89	33.26	1.67
-All fields	400	43.14	33.11	1.67
-All fields	401	43.39	32.97	1.67
-All fields	402	43.64	32.82	1.66
-All fields	403	43.88	32.68	1.65
-All fields	404	44.10	32.55	1.64
-All fields	405	44.36	32.40	1.64
-All fields	406	44.60	32.26	1.64
-All fields	407	44.84	32.12	1.64
-All fields	408	45.04	32.01	1.62
-All fields	409	45.26	31.87	1.61
-All fields	410	45.48	31.75	1.63
-All fields	411	45.71	31.62	1.64
-All fields	412	45.93	31.48	1.63
-All fields	413	46.17	31.35	1.62
-All fields	414	46.42	31.20	1.62
-All fields	415	46.67	31.06	1.62
-All fields	416	46.89	30.93	1.62
-All fields	417	47.13	30.79	1.61
-All fields	418	47.35	30.66	1.60
-All fields	419	47.58	30.53	1.59
-All fields	420	47.77	30.41	1.59
-All fields	421	48.00	30.28	1.60
-All fields	422	48.22	30.15	1.59
-All fields	423	48.42	30.03	1.58
-All fields	424	48.64	29.91	1.58
-All fields	425	48.87	29.77	1.57
-All fields	426	49.11	29.63	1.57
-All fields	427	49.35	29.49	1.56
-All fields	428	49.56	29.37	1.56
-All fields	429	49.79	29.24	1.55
-All fields	430	50.02	29.11	1.55
-All fields	431	50.22	28.99	1.54
-All fields	432	50.40	28.88	1.53
-All fields	433	50.61	28.76	1.52
-All fields	434	50.80	28.65	1.50
-All fields	435	51.00	28.53	1.50
-All fields	436	51.23	28.40	1.51
-All fields	437	51.46	28.27	1.51
-All fields	438	51.69	28.13	1.50
-All fields	439	51.93	27.99	1.50
-All fields	440	52.15	27.86	1.51
-All fields	441	52.39	27.73	1.52
-All fields	442	52.60	27.60	1.51
-All fields	443	52.82	27.47	1.51
-All fields	444	53.02	27.36	1.52
-All fields	445	53.24	27.23	1.53
-All fields	446	53.43	27.12	1.53
-All fields	447	53.61	27.01	1.52
-All fields	448	53.84	26.88	1.52
-All fields	449	54.08	26.74	1.53
-All fields	450	54.32	26.60	1.53
-All fields	451	54.57	26.46	1.54
-All fields	452	54.80	26.32	1.54
-All fields	453	55.04	26.18	1.54
-All fields	454	55.25	26.06	1.54
-All fields	455	55.45	25.94	1.53
-All fields	456	55.63	25.83	1.53
-All fields	457	55.85	25.71	1.52
-All fields	458	56.05	25.59	1.53
-All fields	459	56.24	25.48	1.53
-All fields	460	56.46	25.35	1.53
-All fields	461	56.69	25.22	1.52
-All fields	462	56.92	25.09	1.51
-All fields	463	57.16	24.94	1.51
-All fields	464	57.38	24.82	1.50
-All fields	465	57.62	24.68	1.50
-All fields	466	57.82	24.56	1.50
-All fields	467	58.04	24.43	1.51
-All fields	468	58.23	24.32	1.51
-All fields	469	58.43	24.21	1.50
-All fields	470	58.59	24.11	1.48
-All fields	471	58.75	24.02	1.46
-All fields	472	58.97	23.89	1.46
-All fields	473	59.19	23.77	1.46
-All fields	474	59.42	23.63	1.45
-All fields	475	59.65	23.50	1.45
-All fields	476	59.86	23.38	1.44
-All fields	477	60.08	23.25	1.43
-All fields	478	60.27	23.14	1.42
-All fields	479	60.43	23.04	1.39
-All fields	480	60.60	22.94	1.38
-All fields	481	60.79	22.83	1.38
-All fields	482	60.98	22.72	1.39
-All fields	483	61.16	22.62	1.41
-All fields	484	61.36	22.50	1.39
-All fields	485	61.57	22.38	1.39
-All fields	486	61.79	22.25	1.38
-All fields	487	62.03	22.11	1.38
-All fields	488	62.25	21.98	1.39
-All fields	489	62.47	21.85	1.40
-All fields	490	62.68	21.73	1.41
-All fields	491	62.89	21.61	1.43
-All fields	492	63.07	21.50	1.44
-All fields	493	63.27	21.39	1.44
-All fields	494	63.46	21.28	1.44
-All fields	495	63.61	21.19	1.43
-All fields	496	63.82	21.07	1.43
-All fields	497	64.02	20.95	1.43
-All fields	498	64.24	20.83	1.42
-All fields	499	64.45	20.70	1.41
-All fields	500	64.63	20.59	1.39
-All fields	501	64.83	20.48	1.37
-All fields	502	65.03	20.36	1.37
-All fields	503	65.23	20.25	1.36
-All fields	504	65.41	20.14	1.36
-All fields	505	65.61	20.02	1.36
-All fields	506	65.79	19.92	1.36
-All fields	507	65.95	19.83	1.36
-All fields	508	66.15	19.71	1.36
-All fields	509	66.35	19.59	1.36
-All fields	510	66.56	19.47	1.35
-All fields	511	66.78	19.35	1.35
-All fields	512	66.97	19.23	1.36
-All fields	513	67.18	19.11	1.37
-All fields	514	67.38	18.99	1.37
-All fields	515	67.56	18.89	1.36
-All fields	516	67.73	18.79	1.35
-All fields	517	67.92	18.68	1.34
-All fields	518	68.09	18.58	1.34
-All fields	519	68.27	18.48	1.35
-All fields	520	68.49	18.35	1.36
-All fields	521	68.70	18.23	1.37
-All fields	522	68.92	18.10	1.37
-All fields	523	69.14	17.97	1.37
-All fields	524	69.34	17.86	1.38
-All fields	525	69.56	17.73	1.38
-All fields	526	69.74	17.62	1.37
-All fields	527	69.94	17.51	1.39
-All fields	528	70.13	17.39	1.40
-All fields	529	70.34	17.27	1.41
-All fields	530	70.54	17.15	1.43
-All fields	531	70.74	17.04	1.44
-All fields	532	70.96	16.91	1.44
-All fields	533	71.18	16.78	1.44
-All fields	534	71.41	16.65	1.45
-All fields	535	71.64	16.52	1.46
-All fields	536	71.85	16.39	1.47
+2000s	193	55.63	3.74	0.37
+2010s	0	0.01	2.29	0.00
+2010s	1	0.02	2.29	0.00
+2010s	2	0.06	2.29	0.00
+2010s	3	0.15	2.29	0.00
+2010s	4	0.25	2.29	0.01
+2010s	5	0.38	2.28	0.01
+2010s	6	0.56	2.28	0.01
+2010s	7	0.75	2.27	0.02
+2010s	8	0.97	2.27	0.02
+2010s	9	1.21	2.26	0.03
+2010s	10	1.47	2.26	0.03
+2010s	11	1.72	2.25	0.04
+2010s	12	1.99	2.25	0.05
+2010s	13	2.22	2.24	0.05
+2010s	14	2.43	2.24	0.05
+2010s	15	2.53	2.23	0.05
+2010s	16	2.72	2.23	0.06
+2010s	17	3.08	2.22	0.06
+2010s	18	3.42	2.21	0.07
+2010s	19	3.78	2.20	0.07
+2010s	20	4.16	2.20	0.07
+2010s	21	4.56	2.19	0.08
+2010s	22	4.91	2.18	0.08
+2010s	23	5.30	2.17	0.08
+2010s	24	5.57	2.16	0.08
+2010s	25	5.78	2.16	0.08
+2010s	26	6.08	2.15	0.08
+2010s	27	6.31	2.15	0.09
+2010s	28	6.71	2.14	0.09
+2010s	29	7.17	2.13	0.09
+2010s	30	7.61	2.12	0.10
+2010s	31	8.07	2.11	0.10
+2010s	32	8.64	2.09	0.10
+2010s	33	9.22	2.08	0.11
+2010s	34	9.77	2.07	0.11
+2010s	35	10.39	2.05	0.12
+2010s	36	10.99	2.04	0.12
+2010s	37	11.44	2.03	0.13
+2010s	38	12.08	2.01	0.14
+2010s	39	12.69	2.00	0.15
+2010s	40	13.24	1.99	0.15
+2010s	41	13.89	1.97	0.15
+2010s	42	14.52	1.96	0.16
+2010s	43	15.19	1.94	0.16
+2010s	44	15.86	1.93	0.17
+2010s	45	16.55	1.91	0.17
+2010s	46	17.28	1.90	0.17
+2010s	47	18.02	1.88	0.17
+2010s	48	18.61	1.86	0.17
+2010s	49	19.25	1.85	0.18
+2010s	50	20.00	1.83	0.18
+2010s	51	20.66	1.82	0.18
+2010s	52	21.48	1.80	0.19
+2010s	53	22.28	1.78	0.19
+2010s	54	23.04	1.76	0.20
+2010s	55	23.81	1.75	0.20
+2010s	56	24.69	1.73	0.20
+2010s	57	25.55	1.71	0.21
+2010s	58	26.46	1.68	0.21
+2010s	59	27.40	1.66	0.21
+2010s	60	28.32	1.64	0.22
+2010s	61	29.21	1.62	0.23
+2010s	62	30.16	1.60	0.23
+2010s	63	31.15	1.58	0.24
+2010s	64	32.23	1.55	0.25
+2010s	65	33.31	1.53	0.25
+2010s	66	34.30	1.51	0.26
+2010s	67	35.43	1.48	0.27
+All fields	0	0.00	58.41	0.00
+All fields	1	0.00	58.41	0.00
+All fields	2	0.00	58.41	0.00
+All fields	3	0.00	58.41	0.00
+All fields	4	0.00	58.41	0.00
+All fields	5	0.00	58.41	0.00
+All fields	6	0.00	58.41	0.00
+All fields	7	0.00	58.41	0.00
+All fields	8	0.01	58.41	0.00
+All fields	9	0.01	58.41	0.00
+All fields	10	0.01	58.40	0.01
+All fields	11	0.01	58.40	0.01
+All fields	12	0.01	58.40	0.01
+All fields	13	0.02	58.40	0.01
+All fields	14	0.02	58.40	0.01
+All fields	15	0.02	58.40	0.01
+All fields	16	0.02	58.40	0.01
+All fields	17	0.02	58.40	0.01
+All fields	18	0.02	58.40	0.01
+All fields	19	0.03	58.40	0.01
+All fields	20	0.03	58.39	0.01
+All fields	21	0.03	58.39	0.01
+All fields	22	0.03	58.39	0.01
+All fields	23	0.03	58.39	0.01
+All fields	24	0.04	58.39	0.01
+All fields	25	0.04	58.39	0.01
+All fields	26	0.04	58.39	0.01
+All fields	27	0.04	58.39	0.01
+All fields	28	0.04	58.39	0.01
+All fields	29	0.04	58.38	0.01
+All fields	30	0.04	58.38	0.01
+All fields	31	0.04	58.38	0.01
+All fields	32	0.05	58.38	0.01
+All fields	33	0.05	58.38	0.01
+All fields	34	0.05	58.38	0.01
+All fields	35	0.05	58.38	0.01
+All fields	36	0.05	58.38	0.01
+All fields	37	0.05	58.38	0.01
+All fields	38	0.06	58.38	0.01
+All fields	39	0.06	58.38	0.01
+All fields	40	0.06	58.37	0.01
+All fields	41	0.06	58.37	0.01
+All fields	42	0.07	58.37	0.01
+All fields	43	0.07	58.37	0.01
+All fields	44	0.07	58.37	0.01
+All fields	45	0.08	58.37	0.02
+All fields	46	0.09	58.36	0.02
+All fields	47	0.09	58.36	0.03
+All fields	48	0.11	58.35	0.03
+All fields	49	0.12	58.34	0.04
+All fields	50	0.13	58.33	0.04
+All fields	51	0.15	58.33	0.05
+All fields	52	0.16	58.32	0.06
+All fields	53	0.17	58.31	0.06
+All fields	54	0.18	58.30	0.07
+All fields	55	0.20	58.29	0.08
+All fields	56	0.21	58.29	0.08
+All fields	57	0.23	58.28	0.09
+All fields	58	0.24	58.27	0.09
+All fields	59	0.25	58.27	0.09
+All fields	60	0.26	58.26	0.09
+All fields	61	0.28	58.25	0.09
+All fields	62	0.29	58.24	0.10
+All fields	63	0.31	58.23	0.10
+All fields	64	0.33	58.22	0.10
+All fields	65	0.34	58.21	0.10
+All fields	66	0.36	58.20	0.10
+All fields	67	0.38	58.19	0.10
+All fields	68	0.39	58.18	0.11
+All fields	69	0.41	58.17	0.11
+All fields	70	0.42	58.16	0.11
+All fields	71	0.43	58.16	0.11
+All fields	72	0.44	58.15	0.11
+All fields	73	0.46	58.14	0.10
+All fields	74	0.47	58.14	0.10
+All fields	75	0.49	58.13	0.10
+All fields	76	0.51	58.11	0.11
+All fields	77	0.54	58.10	0.11
+All fields	78	0.57	58.08	0.12
+All fields	79	0.60	58.06	0.13
+All fields	80	0.63	58.04	0.14
+All fields	81	0.66	58.02	0.15
+All fields	82	0.69	58.01	0.16
+All fields	83	0.72	57.99	0.17
+All fields	84	0.74	57.98	0.17
+All fields	85	0.77	57.96	0.18
+All fields	86	0.80	57.94	0.19
+All fields	87	0.83	57.92	0.20
+All fields	88	0.87	57.90	0.21
+All fields	89	0.91	57.88	0.22
+All fields	90	0.94	57.86	0.22
+All fields	91	0.98	57.84	0.22
+All fields	92	1.02	57.82	0.23
+All fields	93	1.05	57.79	0.23
+All fields	94	1.09	57.77	0.23
+All fields	95	1.13	57.75	0.24
+All fields	96	1.16	57.73	0.24
+All fields	97	1.20	57.71	0.25
+All fields	98	1.24	57.69	0.25
+All fields	99	1.28	57.66	0.26
+All fields	100	1.32	57.64	0.26
+All fields	101	1.37	57.61	0.27
+All fields	102	1.42	57.58	0.28
+All fields	103	1.48	57.55	0.29
+All fields	104	1.53	57.51	0.30
+All fields	105	1.59	57.48	0.31
+All fields	106	1.64	57.45	0.32
+All fields	107	1.69	57.42	0.33
+All fields	108	1.74	57.39	0.34
+All fields	109	1.77	57.38	0.34
+All fields	110	1.82	57.35	0.34
+All fields	111	1.87	57.32	0.34
+All fields	112	1.92	57.29	0.35
+All fields	113	1.97	57.26	0.35
+All fields	114	2.02	57.23	0.35
+All fields	115	2.08	57.20	0.35
+All fields	116	2.12	57.17	0.35
+All fields	117	2.18	57.14	0.34
+All fields	118	2.23	57.11	0.34
+All fields	119	2.28	57.08	0.34
+All fields	120	2.33	57.05	0.34
+All fields	121	2.38	57.02	0.36
+All fields	122	2.41	57.00	0.35
+All fields	123	2.46	56.97	0.35
+All fields	124	2.50	56.95	0.34
+All fields	125	2.56	56.92	0.34
+All fields	126	2.61	56.89	0.34
+All fields	127	2.67	56.85	0.35
+All fields	128	2.72	56.82	0.35
+All fields	129	2.77	56.79	0.35
+All fields	130	2.83	56.76	0.35
+All fields	131	2.88	56.73	0.35
+All fields	132	2.92	56.71	0.34
+All fields	133	2.96	56.68	0.34
+All fields	134	3.00	56.66	0.35
+All fields	135	3.05	56.63	0.34
+All fields	136	3.09	56.61	0.34
+All fields	137	3.14	56.58	0.34
+All fields	138	3.20	56.54	0.34
+All fields	139	3.25	56.51	0.34
+All fields	140	3.31	56.48	0.35
+All fields	141	3.37	56.44	0.35
+All fields	142	3.43	56.41	0.35
+All fields	143	3.48	56.38	0.35
+All fields	144	3.53	56.35	0.36
+All fields	145	3.58	56.32	0.36
+All fields	146	3.63	56.29	0.37
+All fields	147	3.68	56.26	0.37
+All fields	148	3.74	56.22	0.38
+All fields	149	3.80	56.19	0.39
+All fields	150	3.87	56.15	0.39
+All fields	151	3.93	56.11	0.40
+All fields	152	4.00	56.08	0.40
+All fields	153	4.06	56.04	0.40
+All fields	154	4.12	56.00	0.41
+All fields	155	4.19	55.96	0.41
+All fields	156	4.25	55.93	0.42
+All fields	157	4.30	55.90	0.42
+All fields	158	4.35	55.87	0.42
+All fields	159	4.41	55.83	0.43
+All fields	160	4.48	55.79	0.43
+All fields	161	4.55	55.75	0.43
+All fields	162	4.62	55.71	0.44
+All fields	163	4.69	55.67	0.44
+All fields	164	4.75	55.63	0.44
+All fields	165	4.82	55.59	0.44
+All fields	166	4.89	55.55	0.45
+All fields	167	4.96	55.51	0.45
+All fields	168	5.01	55.48	0.45
+All fields	169	5.08	55.45	0.45
+All fields	170	5.14	55.41	0.46
+All fields	171	5.20	55.37	0.46
+All fields	172	5.27	55.33	0.46
+All fields	173	5.34	55.29	0.46
+All fields	174	5.42	55.25	0.47
+All fields	175	5.49	55.20	0.47
+All fields	176	5.56	55.16	0.47
+All fields	177	5.64	55.12	0.48
+All fields	178	5.67	55.10	0.45
+All fields	179	5.73	55.06	0.45
+All fields	180	5.80	55.02	0.46
+All fields	181	5.88	54.98	0.47
+All fields	182	5.95	54.94	0.48
+All fields	183	6.02	54.90	0.48
+All fields	184	6.10	54.85	0.49
+All fields	185	6.18	54.80	0.49
+All fields	186	6.26	54.75	0.50
+All fields	187	6.35	54.70	0.50
+All fields	188	6.43	54.65	0.51
+All fields	189	6.51	54.61	0.51
+All fields	190	6.60	54.56	0.54
+All fields	191	6.68	54.51	0.55
+All fields	192	6.75	54.47	0.55
+All fields	193	6.83	54.42	0.56
+All fields	194	6.88	54.39	0.54
+All fields	195	6.96	54.34	0.55
+All fields	196	7.05	54.29	0.56
+All fields	197	7.14	54.24	0.56
+All fields	198	7.22	54.19	0.56
+All fields	199	7.32	54.14	0.56
+All fields	200	7.40	54.09	0.57
+All fields	201	7.50	54.03	0.57
+All fields	202	7.59	53.98	0.58
+All fields	203	7.67	53.93	0.58
+All fields	204	7.74	53.89	0.58
+All fields	205	7.83	53.84	0.59
+All fields	206	7.91	53.79	0.60
+All fields	207	8.00	53.74	0.60
+All fields	208	8.09	53.69	0.61
+All fields	209	8.18	53.63	0.61
+All fields	210	8.28	53.57	0.62
+All fields	211	8.39	53.51	0.63
+All fields	212	8.48	53.46	0.63
+All fields	213	8.60	53.39	0.64
+All fields	214	8.71	53.32	0.65
+All fields	215	8.82	53.26	0.67
+All fields	216	8.91	53.20	0.68
+All fields	217	9.02	53.14	0.70
+All fields	218	9.13	53.08	0.71
+All fields	219	9.23	53.02	0.72
+All fields	220	9.34	52.95	0.73
+All fields	221	9.46	52.89	0.75
+All fields	222	9.57	52.82	0.75
+All fields	223	9.68	52.75	0.76
+All fields	224	9.79	52.69	0.76
+All fields	225	9.91	52.62	0.77
+All fields	226	10.02	52.56	0.76
+All fields	227	10.13	52.50	0.77
+All fields	228	10.23	52.43	0.77
+All fields	229	10.33	52.38	0.76
+All fields	230	10.43	52.32	0.76
+All fields	231	10.54	52.26	0.76
+All fields	232	10.66	52.18	0.77
+All fields	233	10.79	52.11	0.78
+All fields	234	10.92	52.03	0.79
+All fields	235	11.04	51.96	0.79
+All fields	236	11.16	51.89	0.80
+All fields	237	11.29	51.82	0.81
+All fields	238	11.42	51.74	0.82
+All fields	239	11.55	51.67	0.83
+All fields	240	11.67	51.60	0.84
+All fields	241	11.79	51.53	0.85
+All fields	242	11.87	51.48	0.84
+All fields	243	12.01	51.40	0.86
+All fields	244	12.14	51.32	0.86
+All fields	245	12.27	51.25	0.86
+All fields	246	12.41	51.16	0.87
+All fields	247	12.55	51.08	0.88
+All fields	248	12.68	51.00	0.89
+All fields	249	12.83	50.92	0.90
+All fields	250	12.97	50.84	0.91
+All fields	251	13.09	50.76	0.90
+All fields	252	13.23	50.68	0.91
+All fields	253	13.37	50.60	0.93
+All fields	254	13.51	50.52	0.95
+All fields	255	13.64	50.45	0.95
+All fields	256	13.78	50.36	0.96
+All fields	257	13.92	50.28	0.97
+All fields	258	14.07	50.19	0.97
+All fields	259	14.21	50.11	0.97
+All fields	260	14.34	50.04	0.97
+All fields	261	14.49	49.95	0.97
+All fields	262	14.64	49.86	0.98
+All fields	263	14.79	49.77	0.99
+All fields	264	14.91	49.70	0.98
+All fields	265	15.06	49.62	0.99
+All fields	266	15.20	49.53	0.99
+All fields	267	15.34	49.45	0.99
+All fields	268	15.50	49.36	1.00
+All fields	269	15.66	49.26	1.02
+All fields	270	15.83	49.17	1.02
+All fields	271	15.99	49.07	1.04
+All fields	272	16.14	48.98	1.05
+All fields	273	16.31	48.88	1.06
+All fields	274	16.46	48.79	1.07
+All fields	275	16.63	48.70	1.08
+All fields	276	16.80	48.60	1.10
+All fields	277	16.96	48.50	1.11
+All fields	278	17.09	48.43	1.10
+All fields	279	17.25	48.34	1.12
+All fields	280	17.43	48.23	1.13
+All fields	281	17.61	48.13	1.14
+All fields	282	17.79	48.02	1.15
+All fields	283	17.97	47.91	1.16
+All fields	284	18.13	47.82	1.16
+All fields	285	18.30	47.72	1.17
+All fields	286	18.48	47.62	1.18
+All fields	287	18.65	47.52	1.18
+All fields	288	18.81	47.42	1.18
+All fields	289	18.99	47.32	1.18
+All fields	290	19.15	47.23	1.20
+All fields	291	19.32	47.13	1.21
+All fields	292	19.51	47.01	1.22
+All fields	293	19.70	46.90	1.22
+All fields	294	19.90	46.79	1.23
+All fields	295	20.10	46.67	1.24
+All fields	296	20.30	46.56	1.27
+All fields	297	20.49	46.44	1.28
+All fields	298	20.69	46.33	1.29
+All fields	299	20.88	46.21	1.30
+All fields	300	21.08	46.10	1.32
+All fields	301	21.29	45.98	1.34
+All fields	302	21.48	45.86	1.36
+All fields	303	21.69	45.74	1.38
+All fields	304	21.89	45.62	1.39
+All fields	305	22.10	45.50	1.40
+All fields	306	22.32	45.37	1.41
+All fields	307	22.54	45.24	1.43
+All fields	308	22.74	45.13	1.43
+All fields	309	22.95	45.01	1.44
+All fields	310	23.16	44.88	1.44
+All fields	311	23.37	44.76	1.45
+All fields	312	23.57	44.65	1.45
+All fields	313	23.78	44.52	1.46
+All fields	314	23.97	44.41	1.45
+All fields	315	24.16	44.30	1.44
+All fields	316	24.38	44.17	1.45
+All fields	317	24.60	44.04	1.46
+All fields	318	24.82	43.91	1.46
+All fields	319	25.05	43.78	1.47
+All fields	320	25.25	43.66	1.47
+All fields	321	25.47	43.54	1.47
+All fields	322	25.68	43.41	1.47
+All fields	323	25.88	43.30	1.46
+All fields	324	26.07	43.18	1.46
+All fields	325	26.28	43.06	1.46
+All fields	326	26.44	42.97	1.44
+All fields	327	26.62	42.86	1.44
+All fields	328	26.83	42.74	1.43
+All fields	329	27.03	42.62	1.42
+All fields	330	27.25	42.49	1.42
+All fields	331	27.47	42.37	1.41
+All fields	332	27.66	42.25	1.40
+All fields	333	27.87	42.13	1.40
+All fields	334	28.07	42.02	1.39
+All fields	335	28.27	41.90	1.40
+All fields	336	28.45	41.79	1.39
+All fields	337	28.66	41.67	1.39
+All fields	338	28.85	41.56	1.41
+All fields	339	29.04	41.45	1.41
+All fields	340	29.25	41.32	1.42
+All fields	341	29.48	41.19	1.43
+All fields	342	29.72	41.05	1.44
+All fields	343	29.96	40.91	1.45
+All fields	344	30.18	40.78	1.47
+All fields	345	30.41	40.65	1.49
+All fields	346	30.62	40.53	1.49
+All fields	347	30.83	40.40	1.49
+All fields	348	31.02	40.29	1.50
+All fields	349	31.24	40.16	1.51
+All fields	350	31.44	40.05	1.51
+All fields	351	31.64	39.93	1.52
+All fields	352	31.86	39.80	1.52
+All fields	353	32.10	39.66	1.53
+All fields	354	32.35	39.52	1.53
+All fields	355	32.59	39.37	1.54
+All fields	356	32.79	39.26	1.53
+All fields	357	33.02	39.12	1.52
+All fields	358	33.24	39.00	1.53
+All fields	359	33.45	38.87	1.53
+All fields	360	33.66	38.75	1.54
+All fields	361	33.90	38.61	1.55
+All fields	362	34.11	38.49	1.56
+All fields	363	34.33	38.36	1.57
+All fields	364	34.57	38.22	1.58
+All fields	365	34.80	38.08	1.58
+All fields	366	35.06	37.93	1.58
+All fields	367	35.30	37.79	1.58
+All fields	368	35.53	37.66	1.60
+All fields	369	35.74	37.53	1.59
+All fields	370	35.99	37.39	1.60
+All fields	371	36.23	37.25	1.62
+All fields	372	36.44	37.12	1.63
+All fields	373	36.69	36.98	1.63
+All fields	374	36.90	36.86	1.63
+All fields	375	37.09	36.74	1.62
+All fields	376	37.34	36.60	1.62
+All fields	377	37.58	36.46	1.63
+All fields	378	37.84	36.31	1.63
+All fields	379	38.09	36.16	1.63
+All fields	380	38.32	36.03	1.63
+All fields	381	38.58	35.88	1.66
+All fields	382	38.81	35.74	1.65
+All fields	383	39.04	35.61	1.64
+All fields	384	39.24	35.49	1.63
+All fields	385	39.47	35.36	1.63
+All fields	386	39.68	35.23	1.62
+All fields	387	39.90	35.11	1.64
+All fields	388	40.14	34.96	1.64
+All fields	389	40.39	34.82	1.64
+All fields	390	40.66	34.66	1.65
+All fields	391	40.92	34.51	1.65
+All fields	392	41.16	34.37	1.66
+All fields	393	41.42	34.22	1.66
+All fields	394	41.66	34.08	1.66
+All fields	395	41.90	33.94	1.67
+All fields	396	42.13	33.80	1.69
+All fields	397	42.36	33.67	1.69
+All fields	398	42.55	33.55	1.68
+All fields	399	42.76	33.43	1.67
+All fields	400	43.01	33.29	1.67
+All fields	401	43.25	33.15	1.67
+All fields	402	43.50	33.00	1.66
+All fields	403	43.74	32.86	1.65
+All fields	404	43.97	32.73	1.64
+All fields	405	44.22	32.58	1.64
+All fields	406	44.47	32.44	1.64
+All fields	407	44.71	32.30	1.64
+All fields	408	44.90	32.19	1.62
+All fields	409	45.12	32.05	1.61
+All fields	410	45.34	31.92	1.63
+All fields	411	45.57	31.80	1.64
+All fields	412	45.79	31.66	1.63
+All fields	413	46.03	31.53	1.62
+All fields	414	46.28	31.38	1.62
+All fields	415	46.52	31.24	1.62
+All fields	416	46.74	31.11	1.62
+All fields	417	46.99	30.97	1.61
+All fields	418	47.20	30.84	1.60
+All fields	419	47.43	30.71	1.59
+All fields	420	47.63	30.59	1.59
+All fields	421	47.85	30.46	1.60
+All fields	422	48.07	30.33	1.59
+All fields	423	48.27	30.21	1.58
+All fields	424	48.49	30.09	1.58
+All fields	425	48.72	29.95	1.57
+All fields	426	48.96	29.81	1.57
+All fields	427	49.20	29.67	1.56
+All fields	428	49.41	29.55	1.56
+All fields	429	49.63	29.42	1.55
+All fields	430	49.86	29.29	1.55
+All fields	431	50.07	29.17	1.54
+All fields	432	50.24	29.06	1.53
+All fields	433	50.45	28.94	1.52
+All fields	434	50.65	28.83	1.50
+All fields	435	50.84	28.71	1.50
+All fields	436	51.07	28.58	1.51
+All fields	437	51.30	28.45	1.51
+All fields	438	51.53	28.31	1.50
+All fields	439	51.77	28.17	1.50
+All fields	440	51.99	28.04	1.51
+All fields	441	52.23	27.90	1.52
+All fields	442	52.44	27.78	1.51
+All fields	443	52.66	27.65	1.51
+All fields	444	52.85	27.54	1.52
+All fields	445	53.07	27.41	1.53
+All fields	446	53.26	27.30	1.53
+All fields	447	53.45	27.19	1.52
+All fields	448	53.68	27.06	1.52
+All fields	449	53.91	26.92	1.53
+All fields	450	54.15	26.78	1.53
+All fields	451	54.40	26.64	1.54
+All fields	452	54.63	26.50	1.54
+All fields	453	54.87	26.36	1.54
+All fields	454	55.08	26.24	1.54
+All fields	455	55.28	26.12	1.53
+All fields	456	55.46	26.01	1.53
+All fields	457	55.68	25.89	1.52
+All fields	458	55.88	25.77	1.53
+All fields	459	56.07	25.66	1.53
+All fields	460	56.29	25.53	1.53
+All fields	461	56.51	25.40	1.52
+All fields	462	56.75	25.26	1.51
+All fields	463	56.99	25.12	1.51
+All fields	464	57.20	25.00	1.50
+All fields	465	57.44	24.86	1.50
+All fields	466	57.65	24.74	1.50
+All fields	467	57.86	24.61	1.51
+All fields	468	58.05	24.50	1.51
+All fields	469	58.25	24.39	1.50
+All fields	470	58.41	24.29	1.48
+All fields	471	58.57	24.20	1.46
+All fields	472	58.79	24.07	1.46
+All fields	473	59.01	23.95	1.46
+All fields	474	59.24	23.81	1.45
+All fields	475	59.46	23.68	1.45
+All fields	476	59.67	23.56	1.44
+All fields	477	59.89	23.43	1.43
+All fields	478	60.08	23.32	1.42
+All fields	479	60.25	23.22	1.39
+All fields	480	60.42	23.12	1.38
+All fields	481	60.61	23.01	1.38
+All fields	482	60.80	22.90	1.39
+All fields	483	60.97	22.80	1.41
+All fields	484	61.17	22.68	1.39
+All fields	485	61.38	22.56	1.39
+All fields	486	61.60	22.43	1.38
+All fields	487	61.84	22.29	1.38
+All fields	488	62.05	22.16	1.39
+All fields	489	62.28	22.03	1.40
+All fields	490	62.49	21.91	1.41
+All fields	491	62.69	21.79	1.43
+All fields	492	62.88	21.68	1.44
+All fields	493	63.08	21.57	1.44
+All fields	494	63.26	21.46	1.44
+All fields	495	63.42	21.37	1.43
+All fields	496	63.62	21.25	1.43
+All fields	497	63.82	21.13	1.43
+All fields	498	64.04	21.00	1.42
+All fields	499	64.25	20.88	1.41
+All fields	500	64.44	20.77	1.39
+All fields	501	64.64	20.66	1.37
+All fields	502	64.83	20.54	1.37
+All fields	503	65.03	20.43	1.36
+All fields	504	65.21	20.32	1.36
+All fields	505	65.41	20.20	1.36
+All fields	506	65.59	20.10	1.36
+All fields	507	65.75	20.00	1.36
+All fields	508	65.95	19.89	1.36
+All fields	509	66.15	19.77	1.36
+All fields	510	66.36	19.65	1.35
+All fields	511	66.57	19.53	1.35
+All fields	512	66.76	19.41	1.36
+All fields	513	66.98	19.29	1.37
+All fields	514	67.18	19.17	1.37
+All fields	515	67.35	19.07	1.36
+All fields	516	67.52	18.97	1.35
+All fields	517	67.71	18.86	1.34
+All fields	518	67.88	18.76	1.34
+All fields	519	68.06	18.65	1.35
+All fields	520	68.28	18.53	1.36
+All fields	521	68.49	18.41	1.37
+All fields	522	68.71	18.28	1.37
+All fields	523	68.92	18.15	1.37
+All fields	524	69.12	18.03	1.38
+All fields	525	69.34	17.91	1.38
+All fields	526	69.53	17.80	1.37
+All fields	527	69.72	17.68	1.39
+All fields	528	69.91	17.57	1.40
+All fields	529	70.12	17.45	1.41
+All fields	530	70.33	17.33	1.43
+All fields	531	70.52	17.22	1.44
+All fields	532	70.75	17.09	1.44
+All fields	533	70.96	16.96	1.44
+All fields	534	71.19	16.83	1.45
+All fields	535	71.42	16.69	1.46
+All fields	536	71.63	16.57	1.47
+All fields	537	71.86	16.44	1.47
